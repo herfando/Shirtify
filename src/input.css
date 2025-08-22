@@ -3,6 +3,21 @@
 /* Tambahkan custom screen */
 
 @theme {
+    /* Custom breakpoint */
     --breakpoint-hp: 375px;
-    --breakpoint-desktop: 1024px;    
+    --breakpoint-desktop: 1024px; 
+
+    /* Custom font --> Di body tinggal tambah class="font-display" */
+    --font-display: "Roboto Display", sans-serif;   
+
+    /* Custom border -->  Tinggal membuat class="border-cust" */
+  --color-cust: #D5D7DA;
+}
+
+/* Class custom utility */
+@layer utilities {
+  .border-cust {
+    border-width: 1px;
+    border-color: var(--color-cust);
+  }
 }

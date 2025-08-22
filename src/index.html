@@ -8,13 +8,28 @@
 <body>
 
     <!-- Fando -> UI Design-Home -->
-    <nav class="grid grid-cols-5 gap-4 p-4 bg-amber-400">
-      <div>Shirt</div>
-      <div>Catalog</div>
-      <div>Search</div>
-      <div>Keranjang</div>
-      <div>Profil</div>
-    </nav>
+      <!-- Navbar -->
+        <nav class="grid grid-cols-3 text-center hp:bg-green-300 desktop:bg-blue-300">
+          <!-- Company's Logo -->
+          <a href="#logo" class="flex items-center justify-center gap-2">
+            <img class="bg-amber-500" src="/assets/images/companyicon.png" alt="companys icon" width="42" height="42"><span>Shirt</span>
+          </a>
+          <!-- Catalog -->
+          <div class="flex items-center justify-center gap-2">
+            <img src="/assets/images/catalogicon.png" alt="catalog icon">
+            <a href="#catalog">catalog</a>
+            <form>search</form>
+          </div>
+          <!-- Profile -->
+          <a href="#profile" class="flex items-center justify-center gap-2">
+            <div class="relative">
+              <img src="/assets/images/shoppingcart.png" alt="shopping cart icon">
+              <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">6</span>
+            </div>
+            <div>profil</div>
+          </a>
+        </nav>
+        
     <!-- Fando -> Archive-Menu--> 
     
     <!-- Fando -> Archive-FIlter--> 

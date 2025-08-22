@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+/* Tambahkan custom screen */
+
+@theme {
+    --breakpoint-hp: 375px;
+    --breakpoint-desktop: 1024px;    
+}

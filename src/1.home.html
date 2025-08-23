@@ -66,11 +66,69 @@
           </div>
         </section>
       <!--Featured Product-Section -->
-        <section class="bg-indigo-300 desktop:w-360 hp:w-[393px] grid justify-center mx-auto desktop:p-10 hp:p-5">
-          <div class="bg-amber-200 desktop:w-300 desktop:h-418 hp:w-[393px] hp:h-829 ">
-            <article>
-              
+        <section class="bg-indigo-300  desktop:w-360 hp:w-[393px] grid justify-center mx-auto desktop:p-10 hp:p-5">
+          <div class="bg-amber-200 desktop:w-300 desktop:h-461 hp:w-[393px] hp:h-623 ">
+            <div class="text-[#0A0D12] py-4 desktop:text-4xl hp:text-2xl font-bold">Featured Product</div>
+            <!-- Container untuk grid -->
+            <article id="product-grid" 
+              class="grid desktop:grid-cols-4 hp:grid-cols-2 gap-y-4 gap-x-4">
             </article>
+
+
+            <script>
+              // Constructor untuk product card
+              class Product {
+                constructor(img, title, price, rating) {
+                  this.img = img;
+                  this.title = title;
+                  this.price = price;
+                  this.rating = rating;
+                }
+
+                // method untuk render card ke HTML
+                render() {
+                  return `
+                    <article class="gap-3 flex flex-col w-full desktop:h-[403px] hp:h-[281px] bg-white rounded-lg shadow">
+                      <!-- img product -->
+                      <img class="rounded-2xl desktop:h-[285px] hp:h-[173px]" src="${this.img}" alt="${this.title}">
+                      <!-- title product -->
+                      <h4 class="px-2 desktop:text-l hp:text-sm">${this.title}</h4>
+                      <!-- price product -->
+                      <data class="px-2 desktop:text-l hp:text-sm font-bold">${this.price}</data>
+                      <!-- Rating -->
+                      <div class="desktop:text-l hp:text-sm translate-x-2 flex items-center gap-2">
+                        <img class="w-[17.12px] h-[16.35px]" src="/assets/images/rating.png" alt="rating star">
+                        <span>${this.rating}</span>
+                      </div>
+                    </article>
+                  `;
+                }
+              }
+
+              // Data produk (16 card contoh)
+              const products = [
+                new Product("/assets/images/product1.png", "Sneakers Court Minimalis", "Rp275.000", "4.9"),
+                new Product("/assets/images/product2.png", "Running Shoes Pro", "Rp350.000", "4.8"),
+                new Product("/assets/images/product3.png", "Casual Canvas", "Rp199.000", "4.7"),
+                new Product("/assets/images/product4.png", "High Top Streetwear", "Rp400.000", "4.6"),
+                new Product("/assets/images/product5.png", "Sporty Flex", "Rp299.000", "4.9"),
+                new Product("/assets/images/product6.png", "Classic Leather", "Rp375.000", "4.8"),
+                new Product("/assets/images/product7.png", "Air Walk Comfort", "Rp225.000", "4.7"),
+                new Product("/assets/images/product8.png", "Premium Runner", "Rp420.000", "4.9"),
+                new Product("/assets/images/product9.png", "Sneakers Urban White", "Rp315.000", "4.8"),
+                new Product("/assets/images/product10.png", "Trail Adventure", "Rp450.000", "4.6"),
+                new Product("/assets/images/product11.png", "Lightweight Jogger", "Rp280.000", "4.7"),
+                new Product("/assets/images/product12.png", "Street Flex Black", "Rp330.000", "4.9"),
+                new Product("/assets/images/product13.png", "Daily Comfort", "Rp210.000", "4.8"),
+                new Product("/assets/images/product14.png", "Sport Runner X", "Rp390.000", "4.7"),
+                new Product("/assets/images/product15.png", "Retro Sneakers", "Rp340.000", "4.8"),
+                new Product("/assets/images/product16.png", "Ultra Flex Shoes", "Rp360.000", "4.9"),
+              ];
+
+              // Render semua product ke dalam grid
+              const grid = document.getElementById("product-grid");
+              grid.innerHTML = products.map(product => product.render()).join("");
+            </script>
           </div>
         </section>
     

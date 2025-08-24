@@ -8,21 +8,37 @@
 <body class="font-display">
     <!-- Fando -> Archive-FIlter-->
     <div class="flex">
-      <section class="bg-blue-300 w-[298px] h-[852px]">
-        <div class="grid grid-cols-1 gap-4 p-4">
+      <section class="bg-blue-300 w-[298px] h-[852px] p-4">
+        <div class="grid grid-cols-1 gap-4 p-4 border-cust rounded-2xl">
           <div>Filter</div>
+          <!-- Categories -->
           <div>Categoris</div>
-            <form class="grid grid-cols-1 gap-2">
-              <label class="items-center flex gap-1"><input type="checkbox" class="w-4 h-4 accent-black" /><span>All</span></label>
-              <label class="items-center flex gap-1"><input type="checkbox" class="w-4 h-4 accent-black" /><span>Buku</span></label>
-              <label class="items-center flex gap-1"><input type="checkbox" class="w-4 h-4 accent-black" /><span>Celana</span></label>
-              <label class="items-center flex gap-1"><input type="checkbox" class="w-4 h-4 accent-black" /><span>Sepatu</span></label>
-              <label class="items-center flex gap-1"><input type="checkbox" class="w-4 h-4 accent-black" /><span>Laptop</span></label>
-            </form>
+          <form class="grid grid-cols-1 gap-2">
+            <label class="items-center flex gap-1"><input type="checkbox" class="w-4 h-4 accent-black" /><span>All</span></label>
+            <label class="items-center flex gap-1"><input type="checkbox" class="w-4 h-4 accent-black" /><span>Buku</span></label>
+            <label class="items-center flex gap-1"><input type="checkbox" class="w-4 h-4 accent-black" /><span>Celana</span></label>
+            <label class="items-center flex gap-1"><input type="checkbox" class="w-4 h-4 accent-black" /><span>Sepatu</span></label>
+            <label class="items-center flex gap-1"><input type="checkbox" class="w-4 h-4 accent-black" /><span>Laptop</span></label>
+          </form>
+          <!-- Price -->
           <div>Price</div>
+          <form class="h-[48px] border-cust rounded-lg flex items-center gap-4">
+            <!-- icon rupiah -->
+            <label class="translate-x-2 font-semibold flex justify-center items-center w-[38px] h-[38px] rounded-sm bg-[#E9EAEB]">Rp</label>
+            <!-- Price -->
+            <input type="text" placeholder="Minimum Price" class="flex-1 bg-transparent outline-none text-gray-700 text-sm placeholder-gray-400 transition-all duration-500 ease-in-out">
+          </form>
+          <form class="h-[48px] border-cust rounded-lg flex items-center gap-4">
+            <!-- icon rupiah -->
+            <label class="translate-x-2 font-semibold flex justify-center items-center w-[38px] h-[38px] rounded-sm bg-[#E9EAEB]">Rp</label>
+            <!-- Price -->
+            <input type="text" placeholder="Maximum Price" class="flex-1 bg-transparent outline-none text-gray-700 text-sm placeholder-gray-400 transition-all duration-500 ease-in-out">
+          </form>
           <div>Rating</div>
         </div>
       </section>
+
+
 
       <!-- tanda silang -->
       <div class="border-cust rounded-full h-[32px] w-[32px] grid justify-center items-center bg-white">
@@ -33,6 +49,5 @@
           <div class="absolute left-0 top-1/2 w-full h-[2px] bg-[#0A0D12] -rotate-45"></div>
         </div>
       </div>
-    </div>
 </body>
 </html>

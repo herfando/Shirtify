@@ -7,7 +7,22 @@
 </head>
 <body class="font-display">
     <!-- Fando -> Archive-Menu--> 
-    
-  </h1>
+    <section class="bg-red-300 desktop:hidden hp:block w-full h-[430px]">
+      <nav class="w-full mx-auto max-w-screen-xl h-14 px-4 flex items-center justify-between">
+        <!-- Kiri: hanya tulisan (muncul di HP, hilang di desktop) -->
+        <span class="text-l tracking-wide font-bold">
+          Menu
+        </span>
+
+        <!-- Kanan: tanda silang pakai div (muncul di HP, hilang di desktop) -->
+        <div class="relative w-4 h-4 cursor-pointer">
+          <!-- Garis miring pertama -->
+          <div class="absolute left-0 top-1/2 w-full h-[2px] bg-black rotate-45"></div>
+          <!-- Garis miring kedua -->
+          <div class="absolute left-0 top-1/2 w-full h-[2px] bg-black -rotate-45"></div>
+        </div>
+      </nav>
+    </section>
+  
 </body>
 </html>

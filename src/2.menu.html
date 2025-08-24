@@ -7,7 +7,7 @@
 </head>
 <body class="font-display">
     <!-- Fando -> Archive-Menu--> 
-    <section class="bg-red-300 desktop:hidden hp:block w-full h-[430px]">
+    <section class="bg-white desktop:hidden hp:block w-full h-[430px]">
       <nav class="w-full mx-auto max-w-screen-xl h-14 px-4 flex items-center justify-between">
         <!-- Kiri: hanya tulisan (muncul di HP, hilang di desktop) -->
         <span class="text-l tracking-wide font-bold">
@@ -22,7 +22,14 @@
           <div class="absolute left-0 top-1/2 w-full h-[2px] bg-black -rotate-45"></div>
         </div>
       </nav>
+
+      <form class="h-11 border-cust rounded-lg flex items-center px-3 gap-2 mx-3">
+          <!-- icon customer -->
+          <img src="/assets/images/profileicon.png" alt="search icon" class="w-5 h-5 transition-all duration-500 ease-in-out">
+          <!-- name customer -->
+          <input type="text" placeholder="John Doe" class="flex-1 bg-transparent outline-none text-gray-700 text-sm placeholder-gray-400 transition-all duration-500 ease-in-out">
+      </form>
     </section>
-  
+
 </body>
 </html>

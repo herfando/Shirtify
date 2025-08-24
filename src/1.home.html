@@ -4,11 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
+  <style>
+
+  </style>
 </head>
 <body class="font-display transition-all duration-500 ease-in-out">
     <!-- Fando -> UI Design-Home -->
       <!-- Section-Navbar -->
-        <nav class="w-full grid grid-cols-[auto_auto_auto_auto] text-center h-21   transition-all duration-500 ease-in-out opacity-0 animate-fade-in-up">
+        <nav class="w-full grid grid-cols-[auto_auto_auto_auto] text-center h-21 transition-all duration-500 ease-in-out invisible-before reveal">
           <!-- Logo -->
           <a href="#logo" class="flex items-center justify-center gap-2 transition-all duration-500 ease-in-out hover:scale-105">
               <!-- icon logo -->
@@ -54,7 +57,7 @@
           </button> 
         </nav>
       <!--Section-Hero -->
-        <section class="desktop:w-360 grid justify-center mx-auto desktop:p-10 hp:p-5 hp:px-5 transition-all duration-500 ease-in-out opacity-0 animate-fade-in-up">
+        <section class="desktop:w-360 grid justify-center mx-auto desktop:p-10 hp:p-5 hp:px-5 transition-all duration-500 ease-in-out invisible-before reveal">
             <div class="overflow-hidden desktop:gap-20 rounded-2xl desktop:w-300 desktop:h-85 hp:w-[361px] hp:h-[183px] grid desktop:grid-cols-[auto_auto] object-contain hp:grid-cols-2 justify-center items-center text-center bg-[#F3D7A4] transition-all duration-500 ease-in-out">
                 <img class="desktop:h-[367px] hp:h-[185px] desktop:-translate-x-20 transition-all duration-500 ease-in-out" src="/assets/images/modelpicture.png" alt="model picture">
                 <article class="gap-4  flex flex-col justify-center items-start desktop:-translate-x-20 text-left transition-all duration-500 ease-in-out">
@@ -65,7 +68,7 @@
             </div>
         </section>
       <!--Featured Product-Section -->
-        <section class="  desktop:w-360 hp:w-[393px] grid justify-center mx-auto desktop:p-10 hp:p-5 transition-all duration-500 ease-in-out opacity-0 animate-fade-in-up">
+        <section class="desktop:w-360 hp:w-[393px] grid justify-center mx-auto desktop:p-10 hp:p-5 transition-all duration-500 ease-in-out invisible-before reveal">
           <div class=" desktop:w-300 desktop:h-461 hp:w-[393px] hp:h-623 hp:px-4 desktop:px-0 transition-all duration-500 ease-in-out">
             <div class="text-[#0A0D12] py-4 desktop:text-4xl hp:text-2xl font-bold transition-all duration-500 ease-in-out">Featured Product</div>
             <!-- Container untuk grid -->
@@ -76,7 +79,7 @@
         </section>
 
       <!--Footer-Section -->
-        <section class="mx-auto   desktop:w-360 hp:w-[393px] grid justify-center transition-all duration-500 ease-in-out opacity-0 animate-fade-in-up">
+        <section class="mx-auto desktop:w-360 hp:w-[393px] grid justify-center transition-all duration-500 ease-in-out invisible-before reveal">
           <div class="desktop:py-20 hp:py-10  desktop:w-300 desktop:h-126 hp:w-[393px] hp:h-144 grid desktop:grid-cols-3 hp:grid-cols-1 justify-items-center transition-all duration-500 ease-in-out">
             <!-- Logo & sosmed -->
             <div class=" desktop:h-86 grid gap-4 desktop:w-95 hp:w-[361px] transition-all duration-500 ease-in-out">
@@ -127,7 +130,7 @@
                 // method untuk render card ke HTML
                 render() {
                   return `
-                    <article class="gap-3 flex flex-col w-full desktop:h-[403px] hp:h-[281px] bg-white rounded-lg shadow transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl opacity-0 animate-fade-in-up">
+                    <article class="gap-3 flex flex-col w-full desktop:h-[403px] hp:h-[281px] bg-white rounded-lg shadow transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl invisible-before reveal">
                       <!-- img product -->
                       <img class="rounded-2xl desktop:h-[285px] hp:h-[173px] transition-all duration-500 ease-in-out" src="${this.img}" alt="${this.title}">
                       <!-- title product -->
@@ -167,6 +170,22 @@
               // Render semua product ke dalam grid
               const grid = document.getElementById("product-grid");
               grid.innerHTML = products.map(product => product.render()).join("");
+
+              // IntersectionObserver untuk reveal on scroll
+              const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                    entry.target.classList.add("animate-fade-in-up");
+                    entry.target.classList.remove("invisible-before");
+                    observer.unobserve(entry.target);
+                  }
+                });
+              }, { threshold: 0.1 });
+
+              // observe semua elemen dengan class .reveal
+              document.querySelectorAll(".reveal").forEach(el => {
+                observer.observe(el);
+              });
             </script>
 </body>
 </html>

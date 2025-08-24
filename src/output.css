@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-300: oklch(80.8% 0.114 19.571);
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-blue-300: oklch(80.9% 0.105 251.813);
     --color-gray-400: oklch(70.7% 0.022 261.325);
@@ -31,6 +30,7 @@
     --tracking-wide: 0.025em;
     --radius-sm: 0.25rem;
     --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-transition-duration: 150ms;
@@ -211,6 +211,9 @@
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
+  .m-2 {
+    margin: calc(var(--spacing) * 2);
+  }
   .mx-3 {
     margin-inline: calc(var(--spacing) * 3);
   }
@@ -268,6 +271,12 @@
   .h-\[32px\] {
     height: 32px;
   }
+  .h-\[38px\] {
+    height: 38px;
+  }
+  .h-\[48px\] {
+    height: 48px;
+  }
   .h-\[430px\] {
     height: 430px;
   }
@@ -286,17 +295,14 @@
   .w-10 {
     width: calc(var(--spacing) * 10);
   }
-  .w-45 {
-    width: calc(var(--spacing) * 45);
-  }
   .w-\[17\.12px\] {
     width: 17.12px;
   }
   .w-\[32px\] {
     width: 32px;
   }
-  .w-\[180px\] {
-    width: 180px;
+  .w-\[38px\] {
+    width: 38px;
   }
   .w-\[298px\] {
     width: 298px;
@@ -312,6 +318,11 @@
   }
   .border-collapse {
     border-collapse: collapse;
+  }
+  .translate-2 {
+    --tw-translate-x: calc(var(--spacing) * 2);
+    --tw-translate-y: calc(var(--spacing) * 2);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .translate-x-2 {
     --tw-translate-x: calc(var(--spacing) * 2);
@@ -332,23 +343,14 @@
   .resize {
     resize: both;
   }
-  .appearance-none {
-    appearance: none;
-  }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-  .grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .grid-cols-\[auto_auto_auto_auto\] {
     grid-template-columns: auto auto auto auto;
   }
   .flex-col {
     flex-direction: column;
-  }
-  .content-center {
-    align-content: center;
   }
   .items-center {
     align-items: center;
@@ -362,14 +364,8 @@
   .justify-center {
     justify-content: center;
   }
-  .justify-start {
-    justify-content: flex-start;
-  }
   .justify-items-center {
     justify-items: center;
-  }
-  .justify-items-start {
-    justify-items: start;
   }
   .gap-1 {
     gap: calc(var(--spacing) * 1);
@@ -389,9 +385,6 @@
   .gap-x-4 {
     column-gap: calc(var(--spacing) * 4);
   }
-  .gap-y-2 {
-    row-gap: calc(var(--spacing) * 2);
-  }
   .gap-y-4 {
     row-gap: calc(var(--spacing) * 4);
   }
@@ -410,18 +403,25 @@
   .rounded-sm {
     border-radius: var(--radius-sm);
   }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
+  .rounded-l {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
-  }
-  .border-black {
-    border-color: var(--color-black);
   }
   .border-cust {
     border-color: var(--color-cust);
   }
   .bg-\[\#0A0D12\] {
     background-color: #0A0D12;
+  }
+  .bg-\[\#E9EAEB\] {
+    background-color: #E9EAEB;
   }
   .bg-\[\#F3D7A4\] {
     background-color: #F3D7A4;
@@ -444,8 +444,14 @@
   .object-contain {
     object-fit: contain;
   }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
   .p-4 {
     padding: calc(var(--spacing) * 4);
+  }
+  .p-10 {
+    padding: calc(var(--spacing) * 10);
   }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
@@ -486,6 +492,10 @@
   }
   .text-\[clamp\(16px\,2vw\,24px\)\] {
     font-size: clamp(16px, 2vw, 24px);
+  }
+  .leading-none {
+    --tw-leading: 1;
+    line-height: 1;
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -552,16 +562,6 @@
   .outline-none {
     --tw-outline-style: none;
     outline-style: none;
-  }
-  .checked\:border-black {
-    &:checked {
-      border-color: var(--color-black);
-    }
-  }
-  .checked\:bg-black {
-    &:checked {
-      background-color: var(--color-black);
-    }
   }
   .hover\:scale-105 {
     &:hover {
@@ -1032,6 +1032,10 @@
   inherits: false;
   initial-value: solid;
 }
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
@@ -1145,6 +1149,7 @@
       --tw-skew-x: initial;
       --tw-skew-y: initial;
       --tw-border-style: solid;
+      --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-tracking: initial;
       --tw-shadow: 0 0 #0000;

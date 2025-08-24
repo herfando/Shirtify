@@ -6,8 +6,33 @@
   <link href="./output.css" rel="stylesheet">
 </head>
 <body class="font-display">
-    <!-- Fando -> Archive-FIlter--> 
-    
-  </h1>
+    <!-- Fando -> Archive-FIlter-->
+    <div class="flex">
+      <section class="bg-blue-300 w-[298px] h-[852px]">
+        <div class="grid grid-cols-1 gap-4 p-4">
+          <div>Filter</div>
+          <div>Categoris</div>
+            <form class="grid grid-cols-1 gap-2">
+              <label class="items-center flex gap-1"><input type="checkbox" class="w-4 h-4 accent-black" /><span>All</span></label>
+              <label class="items-center flex gap-1"><input type="checkbox" class="w-4 h-4 accent-black" /><span>Buku</span></label>
+              <label class="items-center flex gap-1"><input type="checkbox" class="w-4 h-4 accent-black" /><span>Celana</span></label>
+              <label class="items-center flex gap-1"><input type="checkbox" class="w-4 h-4 accent-black" /><span>Sepatu</span></label>
+              <label class="items-center flex gap-1"><input type="checkbox" class="w-4 h-4 accent-black" /><span>Laptop</span></label>
+            </form>
+          <div>Price</div>
+          <div>Rating</div>
+        </div>
+      </section>
+
+      <!-- tanda silang -->
+      <div class="border-cust rounded-full h-[32px] w-[32px] grid justify-center items-center bg-white">
+        <div class="relative w-4 h-4 cursor-pointer">
+          <!-- Garis miring pertama -->
+          <div class="absolute left-0 top-1/2 w-full h-[2px] bg-[#0A0D12] rotate-45"></div>
+          <!-- Garis miring kedua -->
+          <div class="absolute left-0 top-1/2 w-full h-[2px] bg-[#0A0D12] -rotate-45"></div>
+        </div>
+      </div>
+    </div>
 </body>
 </html>

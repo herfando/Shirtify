@@ -1,13 +1,297 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
-</head>
-<body class="font-display">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="font-display bg-white text-[#0A0D12]">
     <!-- Doddy prizza -> UI Design-Detail-->
-    
-  </h1>
-</body>
+    <!-- Header -->
+    <header class="border border-cust">
+      <div class="max-w-screen-xl mx-auto px-4 hp:px-5 desktop:p-10">
+        <nav
+          aria-label="Primary"
+          class="flex items-center justify-between py-4"
+        >
+          <a href="./1.home.html" class="flex items-center gap-2">
+            <img
+              src="./assets/gambar-doddy/Logo.png"
+              alt="logo"
+              class="w-6 h-6 rounded-full bg-black"
+            />
+            <span class="text-xl font-semibold tracking-wide">Shirt</span>
+          </a>
+
+          <div class="hidden desktop:inline-flex items-center gap-5">
+            <form role="search" class="flex items-center gap-2">
+              <input
+                aria-label="Cari produk"
+                type="search"
+                placeholder="Search"
+                class="border border-cust placeholder-gray-400 px-3 py-4 rounded-lg outline-none"
+              />
+            </form>
+            <a
+              href="#"
+              aria-label="Cart"
+              class="px-4 py-4 border border-cust rounded-lg"
+              >🛒</a
+            >
+            <a href="#" class="px-4 py-4 border border-cust rounded-lg"
+              >Join Us</a
+            >
+          </div>
+
+          <!-- icon-only on mobile -->
+          <div class="desktop:hidden inline-flex items-center gap-3">
+            <button
+              aria-label="Menu"
+              class="px-3 py-4 border border-cust rounded-lg"
+            >
+              ☰
+            </button>
+            <button
+              aria-label="Cart"
+              class="px-3 py-4 border border-cust rounded-lg"
+            >
+              🛒
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="max-w-screen-xl mx-auto px-4 hp:px-5 desktop:p-10">
+      <!-- Breadcrumb -->
+      <nav aria-label="Breadcrumb" class="text-sm text-gray-700 py-4">
+        <ol class="flex items-center gap-2">
+          <li><a href="./1.home.html" class="underline">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="./4.catalog.html" class="underline">Detail</a></li>
+          <li aria-hidden="true">/</li>
+          <li aria-current="page" class="text-[#0A0D12]">
+            Sneakers Court Minimalis
+          </li>
+        </ol>
+      </nav>
+
+      <!-- PRODUCT AREA -->
+      <article
+        class="grid grid-cols-1 desktop:grid-cols-[auto_auto] gap-4 desktop:gap-20"
+      >
+        <!-- Gallery -->
+        <section
+          aria-label="Galeri Produk"
+          class="bg-[#F3D7A4] rounded-2xl p-4 hp:py-10"
+        >
+          <figure class="overflow-hidden rounded-2xl shadow">
+            <img
+              src="../assets/product-hero.jpg"
+              alt="Sneakers Court Minimalis - tampak samping"
+              class="w-full h-[430px] object-contain bg-[#F3D7A4]"
+            />
+            <figcaption class="sr-only">Gambar utama produk</figcaption>
+          </figure>
+
+          <!-- Thumbnails -->
+          <div class="grid grid-cols-[auto_auto_auto_auto] gap-2 mt-4">
+            <img
+              src="../assets/thumb-1.jpg"
+              alt="Variasi 1"
+              class="w-[93px] h-[73px] rounded-lg border border-cust bg-white object-contain cursor-pointer hover:shadow-lg"
+            />
+            <img
+              src="../assets/thumb-2.jpg"
+              alt="Variasi 2"
+              class="w-[93px] h-[73px] rounded-lg border border-cust bg-white object-contain cursor-pointer hover:shadow-lg"
+            />
+            <img
+              src="../assets/thumb-3.jpg"
+              alt="Variasi 3"
+              class="w-[93px] h-[73px] rounded-lg border border-cust bg-white object-contain cursor-pointer hover:shadow-lg"
+            />
+            <img
+              src="../assets/thumb-4.jpg"
+              alt="Variasi 4"
+              class="w-[93px] h-[73px] rounded-lg border border-cust bg-white object-contain cursor-pointer hover:shadow-lg"
+            />
+          </div>
+        </section>
+
+        <!-- Details -->
+        <section aria-label="Detail Produk" class="flex flex-col gap-4">
+          <header>
+            <h1 class="text-2xl desktop:text-4xl font-bold tracking-wide">
+              Sneakers Court Minimalis
+            </h1>
+            <p class="text-xl desktop:text-2xl font-semibold mt-1">Rp275.000</p>
+
+            <div class="flex items-center gap-2 mt-1">
+              <span aria-label="Rating">⭐️⭐️⭐️⭐️☆</span>
+              <span class="text-sm text-gray-700">4.5</span>
+            </div>
+          </header>
+
+          <!-- Tabs (visual only) -->
+          <div
+            role="tablist"
+            aria-label="Info Produk"
+            class="flex items-center gap-2 mt-2"
+          >
+            <button
+              role="tab"
+              aria-selected="true"
+              class="px-4 py-4 border border-black rounded-lg"
+            >
+              Deskripsi
+            </button>
+            <button
+              role="tab"
+              aria-selected="false"
+              class="px-4 py-4 border border-cust rounded-lg"
+            >
+              Spesifikasi
+            </button>
+          </div>
+
+          <!-- Description -->
+          <section
+            aria-label="Deskripsi"
+            class="border border-cust rounded-lg p-4"
+          >
+            <ul class="grid hp:gap-2 desktop:gap-5 text-sm">
+              <li>
+                • Sneakers dengan desain minimalis, cocok berbagai suasana.
+              </li>
+              <li>
+                • Material kulit sintetis halus bagian luar, lembut di kaki
+                bagian dalam.
+              </li>
+              <li>• Sol karet empuk dan anti selip untuk kenyamanan harian.</li>
+              <li>
+                • Warna netral – mudah dipadukan ke outfit casual maupun
+                semi-formal.
+              </li>
+            </ul>
+          </section>
+
+          <!-- Quantity + CTA -->
+          <form class="flex items-center justify-start gap-3">
+            <label for="qty" class="text-sm text-gray-700">Quantity</label>
+            <input
+              id="qty"
+              type="number"
+              min="1"
+              value="1"
+              class="w-[93px] h-[42px] border border-cust rounded-lg text-center outline-none"
+            />
+            <button
+              type="button"
+              class="px-4 py-4 bg-black text-white rounded-lg hover:shadow-xl transition-all ease-in-out duration-500"
+            >
+              + Add to Cart
+            </button>
+          </form>
+        </section>
+      </article>
+
+      <!-- Related Products -->
+      <section aria-label="Related Product" class="mt-4">
+        <h2 class="text-xl desktop:text-2xl font-semibold mb-3">
+          Related Product
+        </h2>
+
+        <div class="grid grid-cols-1 hp:grid-cols-2 desktop:grid-cols-4 gap-4">
+          <!-- Card 1 -->
+          <article
+            class="border border-cust rounded-2xl p-4 bg-white hover:shadow-lg transition-all"
+          >
+            <img
+              src="../assets/rel-1.jpg"
+              alt="Overshirt Linen"
+              class="w-full h-[180px] object-contain rounded-lg bg-[#F3D7A4]"
+            />
+            <h3 class="text-sm font-semibold mt-2">Overshirt Linen</h3>
+            <p class="text-sm text-gray-700">Rp175.000</p>
+            <p class="text-sm" aria-label="Rating">⭐️ 4.5</p>
+          </article>
+
+          <!-- Card 2 -->
+          <article
+            class="border border-cust rounded-2xl p-4 bg-white hover:shadow-lg transition-all"
+          >
+            <img
+              src="../assets/rel-2.jpg"
+              alt="Sweater Knit Cable"
+              class="w-full h-[180px] object-contain rounded-lg bg-[#F3D7A4]"
+            />
+            <h3 class="text-sm font-semibold mt-2">Sweater Knit Cable</h3>
+            <p class="text-sm text-gray-700">Rp260.000</p>
+            <p class="text-sm" aria-label="Rating">⭐️ 4.7</p>
+          </article>
+
+          <!-- Card 3 -->
+          <article
+            class="border border-cust rounded-2xl p-4 bg-white hover:shadow-lg transition-all"
+          >
+            <img
+              src="../assets/rel-3.jpg"
+              alt="Scarf Motif Kotak"
+              class="w-full h-[180px] object-contain rounded-lg bg-[#F3D7A4]"
+            />
+            <h3 class="text-sm font-semibold mt-2">Scarf Motif Kotak</h3>
+            <p class="text-sm text-gray-700">Rp95.000</p>
+            <p class="text-sm" aria-label="Rating">⭐️ 4.9</p>
+          </article>
+
+          <!-- Card 4 -->
+          <article
+            class="border border-cust rounded-2xl p-4 bg-white hover:shadow-lg transition-all"
+          >
+            <img
+              src="../assets/rel-4.jpg"
+              alt="Scarf Woven Solid"
+              class="w-full h-[180px] object-contain rounded-lg bg-[#F3D7A4]"
+            />
+            <h3 class="text-sm font-semibold mt-2">Scarf Woven Solid</h3>
+            <p class="text-sm text-gray-700">Rp89.000</p>
+            <p class="text-sm" aria-label="Rating">⭐️ 4.7</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border border-cust mt-4">
+      <div
+        class="max-w-screen-xl mx-auto px-4 hp:px-5 desktop:p-10 py-4 grid grid-cols-1 desktop:grid-cols-[auto_auto] gap-4"
+      >
+        <section>
+          <h2 class="text-xl font-semibold">Shirt</h2>
+          <p class="text-sm text-gray-700 mt-1">
+            Explore a variety of styles with our fashion e-commerce platform.
+          </p>
+          <p class="text-sm mt-1">Follow our Social Media:</p>
+          <p class="mt-1">📘 🐦 📸</p>
+        </section>
+
+        <nav aria-label="Footer" class="grid grid-cols-2 gap-4">
+          <ul class="text-sm">
+            <li class="font-semibold">E-Commerce</li>
+            <li><a href="#" class="underline">About us</a></li>
+            <li><a href="#" class="underline">Terms & Conditions</a></li>
+            <li><a href="#" class="underline">Privacy Policy</a></li>
+            <li><a href="#" class="underline">Blog</a></li>
+          </ul>
+          <ul class="text-sm">
+            <li class="font-semibold">Help</li>
+            <li><a href="#" class="underline">How to Transact</a></li>
+            <li><a href="#" class="underline">Payment Method</a></li>
+            <li><a href="#" class="underline">How to Register</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
 </html>

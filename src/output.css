@@ -190,6 +190,17 @@
   }
 }
 @layer utilities {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
   .absolute {
     position: absolute;
   }
@@ -220,8 +231,7 @@
   .mx-auto {
     margin-inline: auto;
   }
-  .my-3 {
-    margin-block: calc(var(--spacing) * 3);
+
   }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
@@ -241,6 +251,12 @@
   .grid {
     display: grid;
   }
+  .hidden {
+    display: none;
+  }
+  .inline-flex {
+    display: inline-flex;
+  }
   .table {
     display: table;
   }
@@ -255,6 +271,9 @@
   }
   .h-5 {
     height: calc(var(--spacing) * 5);
+  }
+  .h-6 {
+    height: calc(var(--spacing) * 6);
   }
   .h-10 {
     height: calc(var(--spacing) * 10);
@@ -277,11 +296,6 @@
   .h-\[32px\] {
     height: 32px;
   }
-  .h-\[38px\] {
-    height: 38px;
-  }
-  .h-\[48px\] {
-    height: 48px;
   }
   .h-\[430px\] {
     height: 430px;
@@ -307,8 +321,6 @@
   .w-\[32px\] {
     width: 32px;
   }
-  .w-\[38px\] {
-    width: 38px;
   }
   .w-\[298px\] {
     width: 298px;
@@ -590,13 +602,7 @@
     --tw-outline-style: none;
     outline-style: none;
   }
-  .hover\:z-50 {
-    &:hover {
-      @media (hover: hover) {
-        z-index: 50;
-      }
-    }
-  }
+
   .hover\:scale-105 {
     &:hover {
       @media (hover: hover) {

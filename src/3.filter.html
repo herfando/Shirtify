@@ -1,13 +1,104 @@
 <!doctype html>
-<html>
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
 </head>
 <body class="font-display">
-    <!-- Fando -> Archive-FIlter--> 
+  <!-- Fando -> Archive Filter -->
+  <div class="flex">
     
-  </h1>
+    <!-- Sidebar Filter -->
+    <aside class="bg-white w-[298px] h-[852px] p-4" aria-label="Filter Produk">
+      <form class="overflow-hidden grid grid-cols-1 gap-3 p-4 border-cust rounded-2xl">
+        
+        <h2 class="text-lg font-bold">Filter</h2>
+        
+        <!-- Categories -->
+        <fieldset>
+          <legend class="font-semibold">Categories</legend>
+          <div class="grid grid-cols-1 gap-2 mt-2">
+            <label class="flex items-center gap-1">
+              <input type="checkbox" class="w-4 h-4 accent-black"/><span>All</span>
+            </label>
+            <label class="flex items-center gap-1">
+              <input type="checkbox" class="w-4 h-4 accent-black"/><span>Shoes</span>
+            </label>
+            <label class="flex items-center gap-1">
+              <input type="checkbox" class="w-4 h-4 accent-black"/><span>Clothes</span>
+            </label>
+            <label class="flex items-center gap-1">
+              <input type="checkbox" class="w-4 h-4 accent-black"/><span>Accessories</span>
+            </label>
+            <label class="flex items-center gap-1">
+              <input type="checkbox" class="w-4 h-4 accent-black"/><span>Accessories</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <hr class="border-b border-cust my-3 -mx-4">
+
+        <!-- Price -->
+        <fieldset>
+          <legend class="font-semibold">Price</legend>
+          <div class="space-y-2 mt-2">
+            <label class="h-[48px] border-cust rounded-lg flex items-center gap-4">
+              <span class="translate-x-2 font-semibold flex justify-center items-center w-[38px] h-[38px] rounded-sm bg-[#E9EAEB]">Rp</span>
+              <input type="text" placeholder="Minimum Price" class="flex-1 bg-transparent outline-none text-gray-700 text-sm placeholder-gray-400">
+            </label>
+            <label class="h-[48px] border-cust rounded-lg flex items-center gap-4">
+              <span class="translate-x-2 font-semibold flex justify-center items-center w-[38px] h-[38px] rounded-sm bg-[#E9EAEB]">Rp</span>
+              <input type="text" placeholder="Maximum Price" class="flex-1 bg-transparent outline-none text-gray-700 text-sm placeholder-gray-400">
+            </label>
+          </div>
+        </fieldset>
+
+        <hr class="border-b border-cust my-3 -mx-4">
+
+        <!-- Rating -->
+        <fieldset class="pb-6">
+          <legend class="font-semibold">Rating</legend>
+          <div class="grid grid-cols-1 gap-4 mt-2 translate-4">
+            <label class="flex items-center gap-1">
+              <input type="checkbox" class="w-4 h-4 accent-black" />
+              <img class="-translate-y-[1px]" src="/assets/images/rating.png" alt="5 stars rating" />
+              <span class="translate-y-[1px]">5</span>
+            </label>
+            <label class="flex items-center gap-1">
+              <input type="checkbox" class="w-4 h-4 accent-black" />
+              <img class="-translate-y-[1px]" src="/assets/images/rating.png" alt="4 stars rating" />
+              <span class="translate-y-[1px]">4</span>
+            </label>
+            <label class="flex items-center gap-1">
+              <input type="checkbox" class="w-4 h-4 accent-black" />
+              <img class="-translate-y-[1px]" src="/assets/images/rating.png" alt="3 stars rating" />
+              <span class="translate-y-[1px]">3</span>
+            </label>
+            <label class="flex items-center gap-1">
+              <input type="checkbox" class="w-4 h-4 accent-black" />
+              <img class="-translate-y-[1px]" src="/assets/images/rating.png" alt="2 stars rating" />
+              <span class="translate-y-[1px]">2</span>
+            </label>
+            <label class="flex items-center gap-1">
+              <input type="checkbox" class="w-4 h-4 accent-black" />
+              <img class="-translate-y-[1px]" src="/assets/images/rating.png" alt="1 star rating" />
+              <span class="translate-y-[1px]">1</span>
+            </label>
+          </div>
+        </fieldset>
+      </form>
+    </aside>
+
+    <!-- Tombol close -->
+    <button type="button" aria-label="Close filter"
+      class="translate-y-4 translate-x-2 border-cust rounded-full h-[32px] w-[32px] grid place-items-center bg-white">
+      <span class="relative w-4 h-4 block">
+        <span class="absolute left-0 top-1/2 -translate-y-1/2 w-full h-[2px] bg-[#0A0D12] rotate-45"></span>
+        <span class="absolute left-0 top-1/2 -translate-y-1/2 w-full h-[2px] bg-[#0A0D12] -rotate-45"></span>
+      </span>
+    </button>
+
+  </div>
 </body>
 </html>

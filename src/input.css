@@ -33,4 +33,9 @@
     border-width: 1px;
     border-color: var(--color-cust);
   }
+  /* tambahan helper biar elemen invisible sebelum discroll */
+    .invisible-before {
+      opacity: 0;
+      transform: translateY(20px);
+    }
 }

@@ -231,9 +231,6 @@
   .-top-1 {
     top: calc(var(--spacing) * -1);
   }
-  .top-1 {
-    top: calc(var(--spacing) * 1);
-  }
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
@@ -329,12 +326,6 @@
   }
   .inline-flex {
     display: inline-flex;
-  }
-  .table {
-    display: table;
-  }
-  .h-0 {
-    height: calc(var(--spacing) * 0);
   }
   .h-0\.5 {
     height: calc(var(--spacing) * 0.5);
@@ -444,9 +435,6 @@
   .flex-grow {
     flex-grow: 1;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .translate-4 {
     --tw-translate-x: calc(var(--spacing) * 4);
     --tw-translate-y: calc(var(--spacing) * 4);
@@ -454,10 +442,6 @@
   }
   .translate-x-2 {
     --tw-translate-x: calc(var(--spacing) * 2);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .-translate-y-1 {
-    --tw-translate-y: calc(var(--spacing) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-y-1\/2 {
@@ -487,9 +471,6 @@
   }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -655,9 +636,6 @@
   }
   .bg-\[\#F3D7A4\] {
     background-color: #F3D7A4;
-  }
-  .bg-amber-200 {
-    background-color: var(--color-amber-200);
   }
   .bg-black {
     background-color: var(--color-black);
@@ -833,10 +811,6 @@
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
@@ -873,11 +847,6 @@
       }
     }
   }
-  .focus-within\:border-indigo-500 {
-    &:focus-within {
-      border-color: var(--color-indigo-500);
-    }
-  }
   .focus-within\:border-teal-500 {
     &:focus-within {
       border-color: var(--color-teal-500);
@@ -897,13 +866,6 @@
         --tw-scale-y: 115%;
         --tw-scale-z: 115%;
         scale: var(--tw-scale-x) var(--tw-scale-y);
-      }
-    }
-  }
-  .hover\:border-indigo-400 {
-    &:hover {
-      @media (hover: hover) {
-        border-color: var(--color-indigo-400);
       }
     }
   }
@@ -969,13 +931,6 @@
   .focus\:text-teal-600 {
     &:focus {
       color: var(--color-teal-600);
-    }
-  }
-  .focus\:placeholder-indigo-300 {
-    &:focus {
-      &::placeholder {
-        color: var(--color-indigo-300);
-      }
     }
   }
   .focus\:placeholder-teal-300 {
@@ -1133,19 +1088,9 @@
       padding-inline: calc(var(--spacing) * 5);
     }
   }
-  .hp\:py-3 {
-    @media (width >= 375px) {
-      padding-block: calc(var(--spacing) * 3);
-    }
-  }
   .hp\:py-4 {
     @media (width >= 375px) {
       padding-block: calc(var(--spacing) * 4);
-    }
-  }
-  .hp\:py-5 {
-    @media (width >= 375px) {
-      padding-block: calc(var(--spacing) * 5);
     }
   }
   .hp\:py-10 {
@@ -1200,11 +1145,6 @@
       height: calc(var(--spacing) * 12);
     }
   }
-  .desktop\:h-60 {
-    @media (width >= 1024px) {
-      height: calc(var(--spacing) * 60);
-    }
-  }
   .desktop\:h-85 {
     @media (width >= 1024px) {
       height: calc(var(--spacing) * 85);
@@ -1218,16 +1158,6 @@
   .desktop\:h-100 {
     @media (width >= 1024px) {
       height: calc(var(--spacing) * 100);
-    }
-  }
-  .desktop\:h-120 {
-    @media (width >= 1024px) {
-      height: calc(var(--spacing) * 120);
-    }
-  }
-  .desktop\:h-126 {
-    @media (width >= 1024px) {
-      height: calc(var(--spacing) * 126);
     }
   }
   .desktop\:h-461 {
@@ -1370,21 +1300,6 @@
   .desktop\:py-3 {
     @media (width >= 1024px) {
       padding-block: calc(var(--spacing) * 3);
-    }
-  }
-  .desktop\:py-6 {
-    @media (width >= 1024px) {
-      padding-block: calc(var(--spacing) * 6);
-    }
-  }
-  .desktop\:py-10 {
-    @media (width >= 1024px) {
-      padding-block: calc(var(--spacing) * 10);
-    }
-  }
-  .desktop\:py-20 {
-    @media (width >= 1024px) {
-      padding-block: calc(var(--spacing) * 20);
     }
   }
   .desktop\:text-2xl {
@@ -1586,11 +1501,6 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-blur {
   syntax: "*";
   inherits: false;
@@ -1698,7 +1608,6 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-outline-style: solid;
       --tw-blur: initial;
       --tw-brightness: initial;
       --tw-contrast: initial;

@@ -1157,6 +1157,11 @@
       height: calc(var(--spacing) * 100);
     }
   }
+  .desktop\:h-126 {
+    @media (width >= 1024px) {
+      height: calc(var(--spacing) * 126);
+    }
+  }
   .desktop\:h-461 {
     @media (width >= 1024px) {
       height: calc(var(--spacing) * 461);
@@ -1297,6 +1302,11 @@
   .desktop\:py-3 {
     @media (width >= 1024px) {
       padding-block: calc(var(--spacing) * 3);
+    }
+  }
+  .desktop\:py-20 {
+    @media (width >= 1024px) {
+      padding-block: calc(var(--spacing) * 20);
     }
   }
   .desktop\:text-2xl {

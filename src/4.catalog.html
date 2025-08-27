@@ -1,13 +1,509 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
-</head>
-<body class="font-display">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="font-display">
     <!-- Ishaq -> UI Design-Catalog -->
-    
-  </h1>
-</body>
+    <header>
+      <!-- Navbar -->
+      <nav class="w-full grid grid-cols-[auto_auto_auto_auto] text-center h-21">
+        <!-- Logo -->
+        <a
+          href="#menu"
+          class="flex items-center justify-center gap-2 hover:scale-110 hover:z-50"
+        >
+          <img
+            class="desktop:h-[42px] desktop:w-[42px] hp:h-8 hp:w-8"
+            src="/assets/images/companyicon.png"
+            alt="Company Icon"
+            width="42"
+            height="42"
+          />
+          <span
+            class="hp:hidden desktop:inline text-[clamp(16px,2vw,24px)] font-bold"
+          >
+            Shirt
+          </span>
+        </a>
+        <!-- Catalog -->
+        <div class="flex items-center justify-center desktop:gap-5 hp:gap-2">
+          <a
+            href="./4.catalog.html"
+            class="hp:w-10 hp:h-10 justify-center desktop:w-27 desktop:h-11 flex items-center gap-2 border-cust rounded-xl hover:scale-115 hover:z-50 hover:shadow-lg"
+          >
+            <img src="/assets/images/catalogicon.png" alt="Catalog Icon" />
+            <span class="hp:hidden desktop:inline">Catalog</span>
+          </a>
+          <form
+            class="cursor-pointer h-11 border border-gray-300 hover:border-teal-400 focus-within:border-teal-500 rounded-xl flex items-center px-3 gap-2 hp:w-47.5 desktop:w-122.75 shadow-sm hover:shadow-md bg-white"
+          >
+            <img
+              src="/assets/images/searchicon.png"
+              alt="Search Icon"
+              class="w-5 h-5 opacity-70 group-hover:opacity-100"
+            />
+            <input
+              type="text"
+              placeholder="Search"
+              class="flex-1 bg-transparent outline-none text-gray-700 text-sm placeholder-gray-400 focus:text-teal-600 focus:placeholder-teal-300"
+            />
+          </form>
+        </div>
+        <!--Profile Cart -->
+        <div class="flex items-center justify-center gap-5">
+          <a href="./8.card.html" class="relative hover:scale-115">
+            <img
+              src="/assets/images/shoppingcart.png"
+              alt="Shopping Cart Icon"
+            />
+            <span
+              class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center"
+              >6</span
+            >
+          </a>
+          <form
+            class="cursor-pointer h-11 border border-gray-300 hover:border-teal-400 focus-within:border-teal-500 rounded-xl flex items-center px-3 gap-2 hp:hidden desktop:w-50 desktop:inline-flex shadow-sm hover:shadow-md bg-white"
+          >
+            <img
+              src="/assets/images/profileicon.png"
+              alt="Profile Icon"
+              class="w-5 h-5 opacity-70 group-hover:opacity-100"
+            />
+            <input
+              type="text"
+              placeholder="John Doe"
+              class="flex-1 bg-transparent outline-none text-gray-700 text-sm placeholder-gray-400 focus:text-teal-600 focus:placeholder-teal-300"
+            />
+            <button
+              class="cursor-pointer desktop:hidden justify-center items-center flex flex-col gap-1 transition-all duration-500 ease-in-out hover:scale-115"
+            >
+              <span
+                class="block w-6 h-0.5 bg-black transition-all duration-500 ease-in-out"
+              ></span>
+              <span
+                class="block w-6 h-0.5 bg-black transition-all duration-500 ease-in-out"
+              ></span>
+              <span
+                class="block w-6 h-0.5 bg-black transition-all duration-500 ease-in-out"
+              ></span>
+            </button>
+          </form>
+        </div>
+      </nav>
+    </header>
+    <main
+      class="desktop:w-7xl top-36 left-32 mx-auto px-4 sm:px-6 lg:px-8 py-8 gap-6"
+    >
+      <h1 class="font-bold text-3xl top-36 left-28 mb-6">Catalog</h1>
+      <section class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <!-- Sidebar Filter -->
+        <aside
+          class="hidden desktop:grid border border-gray-300 rounded-xl desktop:col-span-1 py-4 divide-y divide divide-gray-300 h-[814px]"
+        >
+          <div class="px-4 flex flex-col py-2.5 gap-2.5 h-64">
+            <h2 class="font-bold text-clamp">FILTER</h2>
+            <h3 class="font-semibold text-clamp">Categories</h3>
+            <ul class="mt-3 grow">
+              <li>
+                <label class="flex items-center gap-2"
+                  ><input
+                    type="checkbox"
+                    class="accent-black w-5 rounded"
+                    checked
+                  />
+                  All</label
+                >
+              </li>
+              <li>
+                <label class="flex items-center h-8 gap-2"
+                  ><input type="checkbox" class="accent-black w-5 rounded" />
+                  Shoes</label
+                >
+              </li>
+              <li>
+                <label class="flex items-center h-8 gap-2"
+                  ><input type="checkbox" class="accent-black w-5 rounded" />
+                  Clothes</label
+                >
+              </li>
+              <li>
+                <label class="flex items-center h-8 gap-2"
+                  ><input type="checkbox" class="accent-black w-5 rounded" />
+                  Accessories</label
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col gap-2.5 px-4">
+            <h3 class="font-semibold">Price</h3>
+            <div class="flex rounded-lg border p-2 gap-2 overflow-hidden">
+              <span class="bg-gray-100 text-gray-700 px-3 flex items-center"
+                >Rp</span
+              >
+              <input
+                type="text"
+                placeholder="Minimum Price"
+                class="w-full px-3 py-2 outline-none"
+              />
+            </div>
+            <div class="flex rounded-lg border p-2 gap-2 overflow-hidden">
+              <span class="bg-gray-100 text-gray-700 px-3 flex items-center"
+                >Rp</span
+              >
+              <input
+                type="text"
+                placeholder="Maximum Price"
+                class="w-full px-3 py-2 outline-none"
+              />
+            </div>
+          </div>
+
+          <div class="flex flex-col px-4 gap-2.5 h-64">
+            <h3 class="text-xl font-semibold">Rating</h3>
+            <ul class="space-y-2 mt-3 gap-2">
+              <li class="gap-2 p-2">
+                <label class="flex items-center h-2 p-2 gap-2"
+                  ><input type="checkbox" />
+                  <img src="/assets/images/rating.png" alt="" />5</label
+                >
+              </li>
+              <li class="gap-2 p-2">
+                <label class="flex items-center h-2 p-2 gap-2"
+                  ><input type="checkbox" /><img
+                    src="/assets/images/rating.png"
+                    alt=""
+                  />4</label
+                >
+              </li>
+              <li class="gap-2 p-2">
+                <label class="flex items-center h-2 p-2 gap-2"
+                  ><input type="checkbox" /><img
+                    src="/assets/images/rating.png"
+                    alt=""
+                  />3</label
+                >
+              </li>
+              <li class="gap-2 p-2">
+                <label class="flex items-center h-2 p-2 gap-2"
+                  ><input type="checkbox" /><img
+                    src="/assets/images/rating.png"
+                    alt=""
+                  />2</label
+                >
+              </li>
+              <li class="gap-2 p-2">
+                <label class="flex items-center h-2 p-2 gap-2"
+                  ><input type="checkbox" /><img
+                    src="/assets/images/rating.png"
+                    alt=""
+                  />1</label
+                >
+              </li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- Catalog Grid -->
+        <section class="desktop:col-span-3 space-y-6">
+          <div
+            class="flex flex-col gap-2 desktop:flex-row desktop:items-center desktop:justify-between"
+          >
+            <!-- Text -->
+            <p class="text-sm text-gray-600">Showing 160 products</p>
+
+            <!-- Controls -->
+            <div class="flex items-center gap-3 justify-between">
+              <!-- Filter Button (Hanya mobile/tablet) -->
+              <button
+                class="flex items-center gap-2 border rounded-lg px-4 py-2 text-gray-700 hover:bg-gray-50 desktop:hidden"
+              >
+                <span>Filter</span>
+                <!-- icon filter -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L15 13.414V19a1 1 0 01-1.447.894l-4-2A1 1 0 019 17v-3.586L3.293 6.707A1 1 0 013 6V4z"
+                  />
+                </svg>
+              </button>
+
+              <span class="hidden desktop:inline text-clamp font-bold"
+                >Sort</span
+              >
+
+              <button
+                class="h-[44px] w-[167px] flex items-center justify-between gap-[19px] border rounded-lg px-4 py-2 text-gray-700 hover:bg-gray-50"
+              >
+                <span>Latest</span>
+                <!-- dropdown arrow -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Product Cards -->
+          <article
+            id="product-grid"
+            class="grid grid-cols-2 hp:grid-cols-2 desktop:grid-cols-4 gap-6"
+          ></article>
+
+          <!-- Load More -->
+          <div class="flex justify-center">
+            <button
+              class="px-6 py-2 border rounded-lg hover:bg-gray-100 transition"
+            >
+              Load More
+            </button>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer class="mx-auto desktop:w-360 hp:w-[393px] grid justify-center">
+      <div
+        class="py-3 desktop:w-300 desktop:h-100 hp:w-[393px] hp:h-144 grid desktop:grid-cols-3 hp:grid-cols-1 justify-items-center transition-all duration-500 ease-in-out"
+      >
+        <!-- Logo & sosmed -->
+        <div
+          class="desktop:h-86 grid gap-4 desktop:w-95 hp:w-[361px] transition-all duration-500 ease-in-out"
+        >
+          <a href="#logo" class="flex items-center gap-2">
+            <!-- icon logo -->
+            <img
+              class="desktop:h-10.5 desktop:w-10.5 hp:h-8 hp:w-8 transition-all duration-500 ease-in-out"
+              src="/assets/images/companyicon.png"
+              alt="companys icon"
+              width="42"
+              height="42"
+            />
+            <!-- font shirt -->
+            <span
+              class="text-2xl font-bold transition-all duration-500 ease-in-out"
+              >Shirt</span
+            >
+          </a>
+          <p class="transition-all duration-500 ease-in-out">
+            Explore a realm of style with our fashion e-commerce platform, where
+            shopping is effortless. Experience a smooth journey with an
+            extensive selection of trendy apparel, all delivered directly to
+            your home.
+          </p>
+          <h4 class="font-bold text-xl transition-all duration-500 ease-in-out">
+            Follow on Social Media
+          </h4>
+          <!-- Sosmed -->
+          <div class="flex gap-3 transition-all duration-500 ease-in-out">
+            <div
+              class="cursor-pointer border-cust rounded-full w-10 h-10 items-center flex justify-center transition-all duration-500 ease-in-out hover:scale-115"
+            >
+              <img src="/assets/images/sosmed1.png" alt="facebook" />
+            </div>
+            <div
+              class="cursor-pointer border-cust rounded-full w-10 h-10 items-center flex justify-center transition-all duration-500 ease-in-out hover:scale-115"
+            >
+              <img src="/assets/images/sosmed2.png" alt="facebook" />
+            </div>
+            <div
+              class="cursor-pointer border-cust rounded-full w-10 h-10 items-center flex justify-center transition-all duration-500 ease-in-out hover:scale-115"
+            >
+              <img src="/assets/images/sosmed3.png" alt="facebook" />
+            </div>
+            <div
+              class="cursor-pointer border-cust rounded-full w-10 h-10 items-center flex justify-center transition-all duration-500 ease-in-out hover:scale-115"
+            >
+              <img src="/assets/images/sosmed4.png" alt="facebook" />
+            </div>
+          </div>
+        </div>
+        <!-- Contact Info -->
+        <div
+          class="hp:py-4 grid desktop:h-[230px] desktop:w-50 hp:w-[361px] transition-all duration-500 ease-in-out"
+        >
+          <span class="font-bold transition-all duration-500 ease-in-out"
+            >E-Commerce</span
+          >
+          <span class="cursor-pointer transition-all duration-500 ease-in-out"
+            >About Us</span
+          >
+          <span class="cursor-pointer transition-all duration-500 ease-in-out"
+            >Terms & Condition</span
+          >
+          <span class="cursor-pointer transition-all duration-500 ease-in-out"
+            >Privacy Policy</span
+          >
+          <span class="cursor-pointer transition-all duration-500 ease-in-out"
+            >Blog</span
+          >
+        </div>
+        <!-- Support -->
+        <div
+          class="hp:py-4 grid desktop:h-[180px] desktop:w-50 hp:w-[361px] transition-all duration-500 ease-in-out"
+        >
+          <span class="font-bold transition-all duration-500 ease-in-out"
+            >Help</span
+          >
+          <span class="cursor-pointer transition-all duration-500 ease-in-out"
+            >How to Transact</span
+          >
+          <span class="cursor-pointer transition-all duration-500 ease-in-out"
+            >Payment Method</span
+          >
+          <span class="cursor-pointer transition-all duration-500 ease-in-out"
+            >How to Register</span
+          >
+        </div>
+      </div>
+    </footer>
+    <script>
+      class Product {
+        constructor(img, title, price, rating) {
+          this.img = img;
+          this.title = title;
+          this.price = price;
+          this.rating = rating;
+        }
+        render() {
+          return `
+                    <article class="cursor-pointer border-none rounded-xl shadow-sm bg-white rounded-lg shadow gap-0.5">
+                      <!-- img product -->
+                      <img class="w-full h-auto object-cover border-none rounded-t-xl" src="${this.img}" alt="${this.title}">
+                      <!-- title product -->
+                      <h4 class="line-clamp-1 px-2 desktop:text-sm hp:text-xs">${this.title}</h4>
+                      <!-- price product -->
+                      <data class="px-2 top-0.5 desktop:text-sm hp:text-xs font-bold">${this.price}</data>
+                      <!-- Rating -->
+                      <div class="px-2 desktop:text-sm hp:text-xs flex gap-0.5">
+                        <img class="w-[17.12px] h-[16.35px] top-[3.48px] left-[3.44px]" src="/assets/images/rating.png" alt="rating star">
+                        <span class="">${this.rating}</span>
+                      </div>
+                    </article>
+                  `;
+        }
+      }
+      const products = [
+        new Product(
+          '/assets/images/product1.png',
+          'Sneakers Court Minimalis',
+          'Rp275.000',
+          '4.9'
+        ),
+        new Product(
+          '/assets/images/product2.png',
+          'Kaos Crewneck Esensial',
+          'Rp800.000',
+          '4.8'
+        ),
+        new Product(
+          '/assets/images/product3.png',
+          'Tas Selempang Klasik',
+          'Rp1.600.000',
+          '4.7'
+        ),
+        new Product(
+          '/assets/images/product4.png',
+          'Kaos Soft Touch',
+          'Rp650.000',
+          '4.6'
+        ),
+        new Product(
+          '/assets/images/product5.png',
+          'Overshirt Utility',
+          'Rp375.000',
+          '4.5'
+        ),
+        new Product(
+          '/assets/images/product6.png',
+          'Sweater Rajut Cable',
+          'Rp1.300.000',
+          '4.8'
+        ),
+        new Product(
+          '/assets/images/product7.png',
+          'Syal Wol Kotak',
+          'Rp220.000',
+          '4.9'
+        ),
+        new Product(
+          '/assets/images/product8.png',
+          'Syal Wol Solid',
+          'Rp180.000',
+          '4.7'
+        ),
+        new Product(
+          '/assets/images/product9.png',
+          'Celana Panjang Tailored',
+          'Rp2.200.000',
+          '4.8'
+        ),
+        new Product(
+          '/assets/images/product10.png',
+          'Sneakers Harian',
+          'Rp1.900.000',
+          '4.9'
+        ),
+        new Product(
+          '/assets/images/product11.png',
+          'Jaket Puffer Quilted',
+          'Rp450.000',
+          '4.6'
+        ),
+        new Product(
+          '/assets/images/product12.png',
+          'Kemeja Oxford',
+          'Rp950.000',
+          '4.8'
+        ),
+        new Product(
+          '/assets/images/product13.png',
+          'Celana Pendek Chino',
+          'Rp120.000',
+          '4.5'
+        ),
+        new Product(
+          '/assets/images/product14.png',
+          'Topi Baseball 6-Panel',
+          'Rp320.000',
+          '4.7'
+        ),
+        new Product(
+          '/assets/images/product15.png',
+          'Kaos Katun Premium',
+          'Rp1.100.000',
+          '4.9'
+        ),
+        new Product(
+          '/assets/images/product16.png',
+          'Hoodie Pullover Fleece',
+          'Rp275.000',
+          '4.8'
+        ),
+      ];
+      const grid = document.getElementById('product-grid');
+      grid.innerHTML = products.map((product) => product.render()).join('');
+    </script>
+  </body>
 </html>

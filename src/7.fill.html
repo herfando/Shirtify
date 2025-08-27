@@ -1,13 +1,386 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
-</head>
-<body class="font-display">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fill e-commerce</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="font-display bg-gray-100">
     <!-- Doddy prizza -> Archieve-Fill-->
-    
-  </h1>
-</body>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm px-6 py-3">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <!-- Left: Logo -->
+        <div class="flex items-center space-x-2">
+          <img
+            src="/src/assets/companyicon.png"
+            alt="Logo"
+            class="w-10 h-10"
+          />
+          <span class="font-bold text-2xl">Shirt</span>
+        </div>
+
+        <!-- Center: Catalog + Search -->
+        <div class="flex items-center flex-1 max-w-2xl mx-6 space-x-3">
+          <button
+            class="flex items-center gap-2 px-3 py-2 border border-cust rounded-md hover:bg-gray-50"
+          >
+            <img
+              src="/src/assets/catalogicon.png"
+              alt="Catalog"
+              class="w-5 h-5"
+            />
+            <span class="text-sm">Catalog</span>
+          </button>
+
+          <div class="flex-1">
+            <div class="relative">
+              <span
+                class="absolute inset-y-0 left-3 flex items-center text-gray-400"
+              >
+                <img
+                  src="/src/assets/searchicon.png"
+                  alt="Search"
+                  class="w-5 h-5"
+                />
+              </span>
+              <input
+                type="text"
+                placeholder="Search"
+                class="w-full border border-cust rounded-md pl-10 pr-4 py-2 text-sm"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Cart + User -->
+        <div class="flex items-center space-x-3">
+          <!-- Cart -->
+          <div class="relative">
+            <button
+              class="p-2 hover:bg-gray-50 relative flex items-center justify-center"
+            >
+              <img
+                src="/src/assets/shoppingcart.png"
+                alt="Cart"
+                class="w-5 h-5"
+              />
+              <!-- Badge -->
+              <span
+                class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-medium px-1.5 py-0.5 rounded-full"
+                >6</span
+              >
+            </button>
+          </div>
+
+          <!-- User -->
+          <button
+            class="flex items-center gap-2 px-3 py-2 border border-cust rounded-md hover:bg-gray-50"
+          >
+            <img
+              src="/src/assets/profileicon.png"
+              alt="User"
+              class="w-5 h-5"
+            />
+            <span class="text-sm">John Doe</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <div class="max-w-7xl mx-auto pt-12 pb-30">
+      <h1 class="text-2xl font-bold mb-6">Checkout</h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Left Section -->
+        <div class="col-span-2 bg-white p-6 rounded-xl shadow space-y-6">
+          <!-- Shipping Address -->
+          <div>
+            <h2 class="font-semibold mb-3">Shipping Address</h2>
+            <div class="space-y-3">
+              <!-- Name -->
+              <div class="relative w-full">
+                <label
+                  for="name"
+                  class="absolute top-2 left-3 bg-white px-1 text-xs text-gray-500"
+                >
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="John Doe"
+                  class="peer pt-6 pb-2 w-full border border-cust rounded-lg px-4"
+                />
+              </div>
+
+              <!-- Phone Number -->
+              <div class="relative w-full">
+                <label
+                  for="phone"
+                  class="absolute top-2 left-3 bg-white px-1 text-xs text-gray-500"
+                >
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="+62 812 3456 7890"
+                  class="peer pt-6 pb-2 w-full border border-cust rounded-lg px-4"
+                />
+              </div>
+
+              <!-- City -->
+              <div class="relative w-full">
+                <label
+                  for="city"
+                  class="absolute top-2 left-3 bg-white px-1 text-xs text-gray-500"
+                >
+                  City
+                </label>
+                <input
+                  type="text"
+                  id="city"
+                  placeholder="Jakarta"
+                  class="peer pt-6 pb-2 w-full border border-cust rounded-lg px-4"
+                />
+              </div>
+
+              <!-- Postal Code -->
+              <div class="relative w-full">
+                <label
+                  for="postal"
+                  class="absolute top-2 left-3 bg-white px-1 text-xs text-gray-500"
+                >
+                  Postal Code
+                </label>
+                <input
+                  type="text"
+                  id="postal"
+                  placeholder="12345"
+                  class="peer pt-6 pb-2 w-full border border-cust rounded-lg px-4"
+                />
+              </div>
+
+              <!-- Address -->
+              <div class="relative w-full">
+                <label
+                  for="address"
+                  class="absolute top-2 left-3 bg-white px-1 text-xs text-gray-500"
+                >
+                  Address
+                </label>
+                <textarea
+                  id="address"
+                  rows="4"
+                  placeholder="Enter your address"
+                  class="peer pt-6 pb-2 resize-none w-full border border-cust rounded-lg px-4"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="border-t border-gray-300 -mx-6 my-5"></div>
+
+            <!-- Shipping Method -->
+            <div>
+              <h2 class="font-semibold mb-3">Shipping Method</h2>
+              <!-- Shipping Method -->
+              <div class="relative w-full">
+                <!-- Label di dalam border -->
+                <label
+                  for="shipping"
+                  class="absolute top-2 left-3 bg-white px-1 text-xs text-gray-500"
+                >
+                  Select Shipping
+                </label>
+
+                <!-- Select -->
+                <select
+                  id="shipping"
+                  class="peer pt-7 pb-2 w-full border border-gray-300 rounded-lg px-3"
+                >
+                  <option>JNE - Rp12.000</option>
+                  <option>JNT Express - Rp10.000</option>
+                  <option>SiCepat - Rp11.000</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="border-t border-gray-300 -mx-6 my-5"></div>
+
+            <!-- Product -->
+            <div>
+              <h2 class="font-semibold mb-3">Product</h2>
+              <div class="flex items-center gap-4">
+                <img
+                  src="/src/assets/product15.png"
+                  alt="T-shirt Product"
+                  class="w-18 h-18 rounded-md object-cover"
+                />
+                <div class="flex-1">
+                  <p class="font-bold">Kaos Katun Premium</p>
+                  <p class="text-sm text-gray-500">T-Shirt</p>
+                </div>
+                <div class="text-right font-bold">1 x Rp1.100.000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="col-span-1 bg-white p-6 rounded-xl shadow space-y-6 self-start">
+          <!-- Payment Method -->
+          <div>
+            <h2 class="font-semibold mb-3">Payment Method</h2>
+            <div class="space-y-3">
+              <!-- BNI -->
+              <label
+                class="flex items-center gap-3 p-3 my-2 cursor-pointer"
+              >
+                <input type="radio" name="payment" class="accent-black" />
+                <img
+                  src="/src/assets/BNI.png"
+                  alt="Mandiri"
+                  class="w-10 h-10 p-1 border border-gray-300 rounded-md object-contain"
+                />
+                <span class="text-sm">BNI Virtual Account</span>
+              </label>
+
+              <!-- BRI -->
+              <label
+                class="flex items-center gap-3 p-3 border-t border-gray-300 my-2 cursor-pointer"
+              >
+                <input type="radio" name="payment" class="accent-black" />
+                <img
+                  src="/src/assets/BRI.png"
+                  alt="Mandiri"
+                  class="w-10 h-10 p-1 border border-gray-300 rounded-md object-contain"
+                />
+                <span class="text-sm">BRI Virtual Account</span>
+              </label>
+
+              <!-- BCA -->
+              <label
+                class="flex items-center gap-3 p-3 border-t border-gray-300 my-2 cursor-pointer"
+              >
+                <input type="radio" name="payment" class="accent-black" />
+                <img
+                  src="/src/assets/BCA.png"
+                  alt="Mandiri"
+                  class="w-10 h-10 p-1 border border-gray-300 rounded-md object-contain"
+                />
+                <span class="text-sm">BCA Virtual Account</span>
+              </label>
+
+              <!-- Mandiri -->
+
+              <label
+                class="flex items-center gap-3 p-3 border-t border-gray-300 mt-2 cursor-pointer"
+              >
+                <input type="radio" name="payment" class="accent-black" />
+                <img
+                  src="/src/assets/Mandiri.png"
+                  alt="Mandiri"
+                  class="w-10 h-10 p-1 border border-gray-300 rounded-md object-contain"
+                />
+                <span class="text-sm">Mandiri Virtual Account</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="border-t border-gray-300 -mx-6 mb-5"></div>
+
+          <!-- Payment Summary -->
+          <div class="space-y-2">
+            <h2 class="font-semibold">Payment Summary</h2>
+            <div class="flex justify-between text-sm">
+              <span>Total Price of Goods</span>
+              <span class="font-bold">Rp1.100.000</span>
+            </div>
+            <div class="flex justify-between text-sm">
+              <span>Shipping cost</span>
+              <span class="font-bold">Rp10.000</span>
+            </div>
+            <div class="flex justify-between text-sm font-bold">
+              <span>Total</span>
+              <span>Rp1.110.000</span>
+            </div>
+            <button
+              class="w-full mt-4 bg-black text-white py-3 rounded-lg font-medium"
+            >
+              Pay Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <!-- footer -->
+  <footer class="bg-white shadow px-8 py-12">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+      <!-- Logo & Description -->
+      <div>
+        <div class="flex items-center space-x-2 mb-4">
+          <img src="/src/assets/companyicon.png" alt="Logo" class="w-10 h-10" />
+          <span class="font-bold text-2xl">Shirt</span>
+        </div>
+        <p class="text-sm text-gray-600 leading-relaxed mb-8">
+          Explore a realm of style with our fashion e-commerce platform, where
+          shopping is effortless. Experience a smooth journey with an extensive
+          selection of trendy apparel, all delivered directly to your home.
+        </p>
+        <p class="font-semibold text-sm mb-3">Follow on Social Media</p>
+        <div class="flex space-x-3">
+          <a
+            href="#"
+            class="w-9 h-9 flex items-center justify-center border border-gray-300 rounded-full hover:bg-gray-50"
+          >
+            <img src="/src/assets/sosmed1.png" alt="Facebook" class="w-4 h-4 object-contain" />
+          </a>
+          <a
+            href="#"
+            class="w-9 h-9 flex items-center justify-center border border-gray-300 rounded-full hover:bg-gray-50"
+          >
+            <img src="/src/assets/sosmed2.png" alt="Instagram" class="w-4 h-4 object-contain" />
+          </a>
+          <a
+            href="#"
+            class="w-9 h-9 flex items-center justify-center border border-gray-300 rounded-full hover:bg-gray-50"
+          >
+            <img src="/src/assets/sosmed3.png" alt="LinkedIn" class="w-4 h-4 object-contain" />
+          </a>
+          <a
+            href="#"
+            class="w-9 h-9 flex items-center justify-center border border-gray-300 rounded-full hover:bg-gray-50"
+          >
+            <img src="/src/assets/sosmed4.png" alt="TikTok" class="w-4 h-4 object-contain" />
+          </a>
+        </div>
+      </div>
+
+      <!-- E-Commerce -->
+      <div class="md:pl-52">
+        <h3 class="font-semibold mb-4">E-Commerce</h3>
+        <ul class=" space-y-4 text-md text-gray-600">
+          <li><a href="#" class="hover:text-black">About Us</a></li>
+          <li><a href="#" class="hover:text-black">Terms & Condition</a></li>
+          <li><a href="#" class="hover:text-black">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-black">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Help -->
+      <div class="md:pl-52 mb-10">
+        <h3 class="font-semibold mb-4">Help</h3>
+        <ul class="space-y-4 text-md text-gray-600">
+          <li><a href="#" class="hover:text-black">How to Transact</a></li>
+          <li><a href="#" class="hover:text-black">Payment Method</a></li>
+          <li><a href="#" class="hover:text-black">How to Register</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 </html>

@@ -7,7 +7,28 @@
 </head>
 <body class="font-display">
     <!-- Fando -> Archive-Menu--> 
-    
-  </h1>
+    <section class="bg-white desktop:hidden hp:block w-full h-[430px]">
+      <nav class="w-full mx-auto max-w-screen-xl h-14 px-4 flex items-center justify-between">
+        <!-- Kiri: hanya tulisan (muncul di HP, hilang di desktop) -->
+        <span class="text-l tracking-wide font-bold">
+          Menu
+        </span>
+
+        <!-- Kanan: tanda silang pakai div (muncul di HP, hilang di desktop) -->
+        <div class="relative w-4 h-4 cursor-pointer">
+          <!-- Garis miring pertama -->
+          <div class="absolute left-0 top-1/2 w-full h-[2px] bg-black rotate-45"></div>
+          <!-- Garis miring kedua -->
+          <div class="absolute left-0 top-1/2 w-full h-[2px] bg-black -rotate-45"></div>
+        </div>
+      </nav>
+
+      <form class="h-11 border border-gray-300 hover:border-teal-400 focus-within:border-teal-500 rounded-xl flex items-center px-3 gap-2 mx-3 shadow-sm hover:shadow-md bg-white transition-all duration-500 ease-in-out">
+        <!-- icon customer -->
+        <img src="/assets/images/profileicon.png" alt="profile icon" class="w-5 h-5 opacity-70 group-hover:opacity-100 transition-all duration-500 ease-in-out">
+        <!-- name customer -->
+        <input type="text" placeholder="John Doe" class="flex-1 bg-transparent outline-none text-gray-700 text-sm placeholder-gray-400 focus:text-teal-600 focus:placeholder-teal-300 transition-all duration-500 ease-in-out">
+      </form>
+    </section>
 </body>
 </html>

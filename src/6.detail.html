@@ -1,13 +1,444 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
-</head>
-<body class="font-display">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>detail_e-commerce</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="font-display bg-white">
     <!-- Doddy prizza -> UI Design-Detail-->
-    
-  </h1>
-</body>
+    <!-- Header & Nav bar-->
+    <header class="max-w-screen-xl mx-auto px-4 hp:px-5 desktop:p-10">
+      <nav
+        class="w-full grid grid-cols-[auto_auto_auto_auto] text-center h-21 transition-all duration-500 ease-in-out opacity-0 animate-fade-in-up"
+      >
+        <!-- Logo -->
+        <a
+          href="#logo"
+          class="flex items-center justify-start gap-2 transition-all duration-500 ease-in-out hover:scale-105"
+        >
+          <!-- icon logo -->
+          <img
+            class="desktop:h-[42px] desktop:w-[42px] hp:h-8 hp:w-8 transition-all duration-500 ease-in-out"
+            src="/Capstone-Tokyo-Team-J/assets/images/companyicon.png"
+            alt="companys icon"
+            width="42"
+            height="42"
+          />
+          <!-- font shirt -->
+          <span
+            class="hp:hidden desktop:inline text-[clamp(16px,2vw,24px)] font-bold transition-all duration-500 ease-in-out"
+            >Shirt</span
+          >
+        </a>
+        <!-- Catalog -->
+        <div
+          class="flex items-center justify-center desktop:gap-5 hp:gap-2 transition-all duration-500 ease-in-out"
+        >
+          <a
+            href="#catalog"
+            class="hp:w-10 hp:h-10 justify-center desktop:w-27 desktop:h-11 flex items-center gap-2 border-cust rounded-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-lg"
+          >
+            <!-- icon catalog-->
+            <img
+              src="/Capstone-Tokyo-Team-J/assets/images/catalogicon.png"
+              alt="catalog icon"
+              class="transition-all duration-500 ease-in-out"
+            />
+            <!-- Font catalog -->
+            <span
+              class="hp:hidden desktop:inline transition-all duration-500 ease-in-out"
+              >catalog</span
+            >
+          </a>
+          <form
+            class="h-11 border-cust rounded-lg flex items-center px-3 gap-2 hp:w-47.5 desktop:w-122.75 transition-all duration-500 ease-in-out"
+          >
+            <!-- Icon search -->
+            <img
+              src="/Capstone-Tokyo-Team-J/assets/images/searchicon.png"
+              alt="search icon"
+              class="w-5 h-5 transition-all duration-500 ease-in-out"
+            />
+            <!-- Font search -->
+            <input
+              type="text"
+              placeholder="search"
+              class="flex-1 bg-transparent outline-none text-gray-700 text-sm placeholder-gray-400 transition-all duration-500 ease-in-out"
+            />
+          </form>
+        </div>
+        <!-- Profile -->
+        <div
+          class="flex items-center justify-end gap-5 transition-all duration-500 ease-in-out"
+        >
+          <a
+            href="shoppingcart"
+            class="relative transition-all duration-500 ease-in-out hover:scale-110"
+          >
+            <!-- icon shopping cart -->
+            <img
+              src="/Capstone-Tokyo-Team-J/assets/images/shoppingcart.png"
+              alt="shopping cart icon"
+              class="transition-all duration-500 ease-in-out"
+            />
+            <!-- notification -->
+            <span
+              class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center transition-all duration-500 ease-in-out"
+              >6</span
+            >
+          </a>
+          <form
+            class="h-11 border-cust rounded-lg flex items-center px-3 gap-2 hp:hidden desktop:w-50 desktop:inline-flex transition-all duration-500 ease-in-out"
+          >
+            <!-- icon customer -->
+            <img
+              src="/Capstone-Tokyo-Team-J/assets/images/profileicon.png"
+              alt="search icon"
+              class="w-5 h-5 transition-all duration-500 ease-in-out"
+            />
+            <!-- name customer -->
+            <input
+              type="text"
+              placeholder="John Doe"
+              class="flex-1 bg-transparent outline-none text-gray-700 text-sm placeholder-gray-400 transition-all duration-500 ease-in-out"
+            />
+          </form>
+        </div>
+        <!-- icon humburger -->
+        <button
+          class="desktop:hidden justify-center items-center flex flex-col gap-1 transition-all duration-500 ease-in-out hover:scale-110"
+        >
+          <span
+            class="block w-6 h-0.5 pr-10 bg-black transition-all duration-500 ease-in-out"
+          ></span>
+          <span
+            class="block w-6 h-0.5 bg-black transition-all duration-500 ease-in-out"
+          ></span>
+          <span
+            class="block w-6 h-0.5 bg-black transition-all duration-500 ease-in-out"
+          ></span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="max-w-screen-xl mx-auto px-4 hp:px-5 desktop:p-10">
+      <!-- Breadcrumb -->
+      <nav class="text-sm text-gray-700 py-4">
+        <ol class="flex items-center gap-2">
+          <li><a href="./1.home.html" class="font-bold">Home</a></li>
+          <li>&gt;</li>
+          <li><a href="./4.catalog.html" class="font-bold">Detail</a></li>
+          <li>&gt;</li>
+          <li>Sneakers Court Minimalis</li>
+        </ol>
+      </nav>
+
+      <!-- PRODUCT AREA -->
+      <article
+        class="grid grid-cols-1 desktop:grid-cols-[auto_auto] gap-4 desktop:gap-5 desktop:py-10"
+      >
+        <!-- Gallery -->
+        <section class="">
+          <figure class="">
+            <img
+              src="/Capstone-Tokyo-Team-J/assets/images/sneakers.png"
+              alt="Sneakers Court Minimalis"
+              class="w-20 h-20 object-cover rounded-2xl"
+            />
+            <figcaption class="sr-only">Gambar utama produk</figcaption>
+          </figure>
+
+          <!-- Thumbnails -->
+          <div class="grid grid-cols-[auto_auto_auto_auto] gap-2 mt-4">
+            <img
+              src="/Capstone-Tokyo-Team-J/assets/images/sneakers.png"
+              alt="Variasi 1"
+              class="w-[73px] h-[73px] rounded-lg border-cust bg-white object-cover cursor-pointer hover:shadow-lg"
+            />
+            <img
+              src="/Capstone-Tokyo-Team-J/assets/images/Thumbnail Image-1.png"
+              alt="Variasi 2"
+              class="w-[73px] h-[73px] rounded-lg border border-cust bg-white object-cover cursor-pointer hover:shadow-lg"
+            />
+            <img
+              src="/Capstone-Tokyo-Team-J/assets/images/Thumbnail Image-2.png"
+              alt="Variasi 3"
+              class="w-[73px] h-[73px] rounded-lg border border-cust bg-white object-cover cursor-pointer hover:shadow-lg"
+            />
+            <img
+              src="/Capstone-Tokyo-Team-J/assets/images/Thumbnail Image-3.png"
+              alt="Variasi 4"
+              class="w-[73px] h-[73px] rounded-lg border border-cust bg-white object-contain cursor-pointer hover:shadow-lg"
+            />
+          </div>
+        </section>
+
+        <!-- Details -->
+        <section class="flex flex-col gap-4">
+          <header class="h-100">
+            <h1 class="text-2xl desktop:text-4xl font-bold">
+              Sneakers Court Minimalis
+            </h1>
+            <p class="text-xl desktop:text-2xl font-semibold mt-1">Rp275.000</p>
+
+            <div class="flex items-center gap-2 mb-10">
+              <img
+                class="h-5 w-5"
+                src="/Capstone-Tokyo-Team-J/assets/images/rating.png"
+                alt="rating"
+              />
+              <span class="text-shadow-lg text-gray-700">4.9</span>
+            </div>
+            <div class="border-t border-cust"></div>
+          </header>
+
+          <!-- Tombol Deskripsi & Spesifikasi -->
+          <div class="flex items-center gap-2 mt-2 border-b">
+            <button class="px-4 py-4 border-b">Deskripsi</button>
+            <button class="px-4 py-4 border-b">Spesifikasi</button>
+          </div>
+
+          <!-- Description -->
+          <section class="p-4">
+            <div class="grid hp:gap-2 desktop:gap-5 text-sm">
+              <p>
+                Sneakers Court Minimalis - Ivory Beige <br />
+                Sepatu sneakers bergaya minimalis dengan kombinasi warna ivory
+                dan beige yang elegan. Terbuat dari material kulit sintetis
+                berkualitas dengan sentuhan suede halus di bagian panel samping
+                dan depan.
+              </p>
+              <ul
+                style="list-style-type: disc; margin-left: 20px"
+                class="space-y-7"
+              >
+                <li class="pb-4">
+                  Desain: Low-top dengan siluet klasik yang timeless
+                </li>
+                <li>Material: Kulit sintetis premium + suede sintetis</li>
+                <li>
+                  Sol: Outsole karet anti-slip dengan warna natural gum untuk
+                  daya cengkeram yang baik
+                </li>
+                <li>
+                  Kenyamanan: Insole empuk dengan bantalan ekstra untuk
+                  pemakaian sehari-hari
+                </li>
+                <li>Warna: Ivory Beige</li>
+                <li>
+                  Gaya: Cocok untuk casual look, street style, maupun
+                  semi-formal
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <div class="border border-cust"></div>
+
+          <!-- Quantity + CTA -->
+          <form class="flex items-center justify-start gap-3">
+            <label for="qty" class="text-sm text-gray-700">Quantity</label>
+            <input
+              id="qty"
+              type="number"
+              min="1"
+              value="1"
+              class="w-[93px] h-[42px] border border-cust rounded-lg text-center outline-none"
+            />
+          </form>
+          <button
+            type="button"
+            class="px-4 py-4 bg-black text-white rounded-lg hover:shadow-xl transition-all ease-in-out duration-500"
+          >
+            + Add to Cart
+          </button>
+        </section>
+      </article>
+
+      <!-- Related Products -->
+      <section class="border-t mt-4">
+        <div class="border-t border-cust"></div>
+        <h2 class="text-xl desktop:text-2xl font-semibold mb-3">
+          Related Product
+        </h2>
+
+        <div class="grid grid-cols-1 hp:grid-cols-2 desktop:grid-cols-4 gap-5">
+          <!-- Card 1 -->
+          <article
+            class="overflow-hidden border border-cust rounded-2xl bg-white shadow"
+          >
+            <img
+              src="/Capstone-Tokyo-Team-J/assets/images/product5.png"
+              alt="Overshirt Linen"
+              class="w-full h-[180px] object-cover"
+            />
+            <h3 class="text-sm font-semibold mt-2 ml-2">Overshirt Utility</h3>
+            <p class="text-sm text-gray-700">Rp375.000</p>
+            <div class="flex items-center gap-1">
+              <img
+                src="/Capstone-Tokyo-Team-J/assets/images/rating.png"
+                alt="rating card"
+                class="w-4 h-4"
+              />
+              <span class="text-sm">4.5</span>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article
+            class="overflow-hidden border border-cust rounded-2xl bg-white shadow"
+          >
+            <img
+              src="/Capstone-Tokyo-Team-J/assets/images/product6.png"
+              alt="Overshirt Linen"
+              class="w-full h-[180px] object-cover"
+            />
+            <h3 class="text-sm font-semibold mt-2 ml-2">Sweater Rajut Cable</h3>
+            <p class="text-sm text-gray-700">Rp1.300.000</p>
+            <div class="flex items-center gap-1">
+              <img
+                src="/Capstone-Tokyo-Team-J/assets/images/rating.png"
+                alt="rating card"
+                class="w-4 h-4"
+              />
+              <span class="text-sm">4.8</span>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article
+            class="overflow-hidden border border-cust rounded-2xl bg-white shadow"
+          >
+            <img
+              src="/Capstone-Tokyo-Team-J/assets/images/syal_wolkotak.png"
+              alt="Overshirt Linen"
+              class="w-full h-[180px] object-cover"
+            />
+            <h3 class="text-sm font-semibold mt-2 ml-2">Syal Wol Kotak</h3>
+            <p class="text-sm text-gray-700">Rp220.000</p>
+            <div class="flex items-center gap-1">
+              <img
+                src="/Capstone-Tokyo-Team-J/assets/images/rating.png"
+                alt="rating card"
+                class="w-4 h-4"
+              />
+              <span class="text-sm">4.9</span>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article
+            class="overflow-hidden border border-cust rounded-2xl bg-white shadow"
+          >
+            <img
+              src="/Capstone-Tokyo-Team-J/assets/images/syal_wolsolid.png"
+              alt="Overshirt Linen"
+              class="w-full h-[180px] object-cover"
+            />
+            <h3 class="text-sm font-semibold mt-2 ml-2">Syal Wol Solid</h3>
+            <p class="text-sm text-gray-700">Rp180.000</p>
+            <div class="flex items-center gap-1">
+              <img
+                src="/Capstone-Tokyo-Team-J/assets/images/rating.png"
+                alt="rating card"
+                class="w-4 h-4"
+              />
+              <span class="text-sm">4.7</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border border-cust mt-4">
+      <div
+        class="max-w-screen-xl mx-auto px-4 hp:px-5 desktop:p-10 py-4 grid grid-cols-1 desktop:grid-cols-3 gap-8"
+      >
+        <!-- Kolom 1 -->
+        <section>
+          <div class="flex items-center gap-2">
+            <img
+              src="/Capstone-Tokyo-Team-J/assets/images/companyicon.png"
+              alt="logo"
+              class="w-8 h-8"
+            />
+            <span class="text-xl font-semibold">Shirt</span>
+          </div>
+          <p class="text-sm text-gray-700 mt-2">
+            Explore a realm of style with our fashion e-commerce platform, where
+            shopping is effortless. Experience a smooth journey with an
+            extensive selection of trendy apparel, all delivered directly to
+            your home.
+          </p>
+          <p class="text-sm font-bold mt-4">Follow on Social Media</p>
+          <div class="flex gap-3 mt-10">
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center rounded-full border overflow-hidden"
+            >
+              <img
+                src="/Capstone-Tokyo-Team-J/assets/images/sosmed1.png"
+                alt="Facebook"
+                class="w-4 h-4 object-contain"
+              />
+            </a>
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center rounded-full border overflow-hidden"
+            >
+              <img
+                src="/Capstone-Tokyo-Team-J/assets/images/sosmed2.png"
+                alt="Instagram"
+                class="w-4 h-4 object-contain"
+              />
+            </a>
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center rounded-full border overflow-hidden"
+            >
+              <img
+                src="/Capstone-Tokyo-Team-J/assets/images/sosmed3.png"
+                alt="LinkedIn"
+                class="w-4 h-4 object-contain"
+              />
+            </a>
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center rounded-full border overflow-hidden"
+            >
+              <img
+                src="/Capstone-Tokyo-Team-J/assets/images/sosmed4.png"
+                alt="TikTok"
+                class="w-4 h-4 object-contain"
+              />
+            </a>
+          </div>
+        </section>
+
+        <!-- Kolom 2 -->
+        <nav>
+          <ul class="text-sm">
+            <li class="font-semibold mb-2">E-Commerce</li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Terms & Condition</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </nav>
+
+        <!-- Kolom 3 -->
+        <nav>
+          <ul class="text-sm">
+            <li class="font-semibold mb-2">Help</li>
+            <li><a href="#">How to Transact</a></li>
+            <li><a href="#">Payment Method</a></li>
+            <li><a href="#">How to Register</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
 </html>

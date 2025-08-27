@@ -16,8 +16,26 @@
 
 /* Class custom utility */
 @layer utilities {
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-in-out forwards;
+  }
   .border-cust {
     border-width: 1px;
     border-color: var(--color-cust);
   }
+  /* tambahan helper biar elemen invisible sebelum discroll */
+    .invisible-before {
+      opacity: 0;
+      transform: translateY(20px);
+    }
 }

@@ -1,228 +1,513 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Shopping Cart </title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
 
-
-  <link href="./output.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  
-
-</head>
-<body class="bg-gray-50">
-
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-50">
     <!-- Junfu -> Ui Design-Cart-->
-    
-      
-     
 
-    <div class="min-h-screen flex flex-col">
-        <header class="bg-white shadow-sm py-4 px-6 md:px-10 flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-                <svg class="h-6 w-6 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
-                   <img src="/src/assets/companyicon.png" alt="Company Icon" class="w-20 h-20 object-cover rounded-lg">  
-                </svg>
-                <span class="font-bold text-xl text-gray-800">Shirt</span>
-            </div>
-            <div class="hidden md:flex items-center space-x-6">
-                <a href="#" class="text-gray-600 hover:text-gray-900 flex items-center">
-                    <svg class="h-5 w-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns=""><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                  
-                    </svg>
-                    <span>Catalog</span>
-                </a>
-                <div class="relative">
-                    <input type="text" placeholder="Search" class="border border-gray-300 rounded-full py-2 px-4 pl-10 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                </div>
-            </div>
-            <div class="flex items-center space-x-4">
-                <a href="#" class="text-gray-600 hover:text-gray-900 relative">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns=""><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                    <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full px-1">5</span>
-                </a>
-                <a href="#" class="text-gray-600 hover:text-gray-900 flex items-center">
-                    <svg class="h-6 w-6 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns=""><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-                    <span>John Doe</span>
-                </a>
-            </div>
-        </header>
-
-        <main class="container mx-auto px-4 py-8 flex-grow">
-            <h1 class="text-3xl font-bold text-gray-800 mb-6">Cart</h1>
-
-            <div class="flex flex-col lg:flex-row gap-8">
-                <section class="flex-1 bg-white p-6 rounded-lg shadow-md">
-                    <div class="mb-4 flex items-center space-x-2">
-                        <input type="checkbox" id="selectAll" class="form-checkbox h-5 w-5 text-indigo-600 rounded">
-                        <label for="selectAll" class="text-gray-700">Select All</label>
-                    </div>
-
-                    <div class="space-y-6">
-                        <div class="flex items-center justify-between border-b pb-4">
-                            <div class="flex items-center space-x-4">
-                                <input type="checkbox" class="form-checkbox h-5 w-5 text-indigo-600 rounded">
-                                <img src="/src/assets/shoes.png" alt="Sneakers Court Minimalis" class="w-20 h-20 object-cover rounded-lg">
-                                <div>
-                                    <h3 class="font-semibold text-gray-800">Sneakers Court Minimalis</h3>
-                                    <p class="text-gray-500 text-sm">Shoes</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center space-x-4">
-                                <p class="font-bold text-gray-600 w-24 text-right">Rp275.000</p>
-                                <div class="flex items-center border border-gray-300 rounded-md">
-                                    <button class="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded-l-md">-</button>
-                                    <span class="px-3 py-1 border-l border-r border-gray-300">2</span>
-                                    <button class="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded-r-md">+</button>
-                                </div>
-                                <button class="text-gray-400 hover:text-red-500">
-                                  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns=""><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg> 
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center justify-between border-b pb-4">
-                            <div class="flex items-center space-x-4">
-                                <input type="checkbox" class="form-checkbox h-5 w-5 text-indigo-600 rounded">
-                                <img src="/src/assets/tshirt.png" alt="Kaos Katun Premium" class="w-20 h-20 object-cover rounded-lg">
-                                <div>
-                                    <h3 class="font-semibold text-gray-800">Kaos Katun Premium</h3>
-                                    <p class="text-gray-500 text-sm">T-Shirt</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center space-x-4">
-                                <p class="font-bold text-gray-600 w-24 text-right">Rp1.100.000</p>
-                                <div class="flex items-center border border-gray-300 rounded-md">
-                                    <button class="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded-l-md">-</button>
-                                    <span class="px-3 py-1 border-l border-r border-gray-300">2</span>
-                                    <button class="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded-r-md">+</button>
-                                </div>
-                                <button class="text-gray-400 hover:text-red-500">
-                                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns=""><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center justify-between border-b pb-4">
-                            <div class="flex items-center space-x-4">
-                                <input type="checkbox" class="form-checkbox h-5 w-5 text-indigo-600 rounded">
-                                <img src="/src/assets/topi.png" alt="Topi Baseball 6-Panel" class="w-20 h-20 object-cover rounded-lg">
-                                <div>
-                                    <h3 class="font-semibold text-gray-800">Topi Baseball 6-Panel</h3>
-                                    <p class="text-gray-500 text-sm">Accessories</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center space-x-4">
-                                <p class="font-bold text-gray-600 w-24 text-right">Rp320.000</p>
-                                <div class="flex items-center border border-gray-300 rounded-md">
-                                    <button class="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded-l-md">-</button>
-                                    <span class="px-3 py-1 border-l border-r border-gray-300">2</span>
-                                    <button class="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded-r-md">+</button>
-                                </div>
-                                <button class="text-gray-400 hover:text-red-500">
-                                   <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns=""><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg> 
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center justify-between border-b pb-4">
-                            <div class="flex items-center space-x-4">
-                                <input type="checkbox" class="form-checkbox h-5 w-5 text-indigo-600 rounded">
-                                <img src="/src/assets/trouser.png" alt="Celana Panjang Tailored" class="w-20 h-20 object-cover rounded-lg">
-                                <div>
-                                    <h3 class="font-semibold text-gray-800">Celana Panjang Tailored</h3>
-                                    <p class="text-gray-500 text-sm">Trousers</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center space-x-4">
-                                <p class="font-bold text-gray-600 w-24 text-right">Rp2.200.000</p>
-                                <div class="flex items-center border border-gray-300 rounded-md">
-                                    <button class="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded-l-md">-</button>
-                                    <span class="px-3 py-1 border-l border-r border-gray-300">2</span>
-                                    <button class="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded-r-md">+</button>
-                                </div>
-                                <button class="text-gray-400 hover:text-red-500">
-                                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns=""><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center space-x-4">
-                                <input type="checkbox" class="form-checkbox h-5 w-5 text-indigo-600 rounded">
-                                <img src="/src/assets/hoodie.png" alt="Hoodie Pullover Fleece" class="w-20 h-20 object-cover rounded-lg">
-                                <div>
-                                    <h3 class="font-semibold text-gray-800">Hoodie Pullover Fleece</h3>
-                                    <p class="text-gray-500 text-sm">Jacket</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center space-x-4">
-                                <p class="font-bold text-gray-600 w-24 text-right">Rp275.000</p>
-                                <div class="flex items-center border border-gray-300 rounded-md">
-                                    <button class="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded-l-md">-</button>
-                                    <span class="px-3 py-1 border-l border-r border-gray-300">2</span>
-                                    <button class="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded-r-md">+</button>
-                                </div>
-                                <button class="text-gray-400 hover:text-red-500">
-                                  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns=""><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <aside class="w-full lg:w-80 bg-white p-6 rounded-lg shadow-md h-min">
-                    <h2 class="text-xl font-bold text-gray-600 mb-4">Total Shopping</h2>
-                    <div class="flex justify-between items-center mb-6">
-                        <span class="text-gray-700">Total</span>
-                        <span class="font-bold text-xl text-gray-600">Rp275.000</span>
-                    </div>
-                    <button class="w-full bg-black text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition duration-300">Checkout</button>
-                </aside>
-            </div>
-        </main>
-       <footer class="bg-white mt-12 border-t border-gray-200">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="col-span-1 md:col-span-2">
-                    <a href="#" class="flex items-center space-x-2">
-                         <img src="/src/assets/companyicon.png" alt="Company Icon" class="w-10 h-10 object-cover rounded-lg">  
-                        <span class="text-xl font-bold text-gray-900">Shirt</span>
-                    </a>
-                    <p class="mt-4 text-gray-500 max-w-sm">
-                        Explore a realm of style with our fashion e-commerce platform, where shopping is effortless. Experience a smooth journey with an extensive selection of trendy apparel, all delivered directly to your home.
-                    </p>
-                    <div class="mt-6">
-                        <p class="text-gray-600 font-medium">Follow on Social Media</p>
-                        <div class="flex space-x-4 mt-2">
-                            <a href="#" class="text-gray-400 hover:text-gray-600"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M9.19795 21.5H13.198V13.4901H16.1618L16.674 9.50977H13.198V7.51126C13.198 6.92451 13.1106 6.37992 13.8058 6.37992L16.8368 6.38281V2.5H13.198C9.59854 2.5 8.125 4.35489 8.125 7.12736V9.50977H5.5V13.4901H8.125V21.5H9.19795Z"></path></svg></a>
-                            <a href="#" class="text-gray-400 hover:text-gray-600"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></a>
-                            <a href="#" class="text-gray-400 hover:text-gray-600"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-4.455 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"></path></svg></a>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase">E-Commerce</h3>
-                    <ul class="mt-4 space-y-4">
-                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">About Us</a></li>
-                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Terms & Condition</a></li>
-                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Privacy Policy</a></li>
-                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Blog</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase">Help</h3>
-                    <ul class="mt-4 space-y-4">
-                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">How to Transact</a></li>
-                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Payment Method</a></li>
-                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">How to Register</a></li>
-                    </ul>
-                </div>
-            </div>
+    <header>
+      <!-- Navbar -->
+      <nav class="w-full grid grid-cols-[auto_auto_auto_auto] text-center h-21">
+        <!-- Logo -->
+        <a
+          href="#menu"
+          class="flex items-center justify-center gap-2 hover:scale-110 hover:z-50"
+        >
+          <img
+            class="desktop:h-[42px] desktop:w-[42px] hp:h-8 hp:w-8"
+            src="/src/assets/companyicon.png"
+            alt="Company Icon"
+            width="42"
+            height="42"
+          />
+          <span
+            class="hp:hidden desktop:inline text-[clamp(16px,2vw,24px)] font-bold"
+          >
+            Shirt
+          </span>
+        </a>
+        <!-- Catalog -->
+        <div class="flex items-center justify-center desktop:gap-5 hp:gap-2">
+          <a
+            href="./4.catalog.html"
+            class="hp:w-10 hp:h-10 justify-center desktop:w-27 desktop:h-11 flex items-center gap-2 border-cust rounded-xl hover:scale-115 hover:z-50 hover:shadow-lg"
+          >
+            <img src="/src/assets/catalogicon.png" alt="Catalog Icon" />
+            <span class="hp:hidden desktop:inline">Catalog</span>
+          </a>
+          <form
+            class="cursor-pointer h-11 border border-gray-300 hover:border-teal-400 focus-within:border-teal-500 rounded-xl flex items-center px-3 gap-2 hp:w-47.5 desktop:w-122.75 shadow-sm hover:shadow-md bg-white"
+          >
+            <img
+              src="/src/assets/searchicon.png"
+              alt="Search Icon"
+              class="w-5 h-5 opacity-70 group-hover:opacity-100"
+            />
+            <input
+              type="text"
+              placeholder="Search"
+              class="flex-1 bg-transparent outline-none text-gray-700 text-sm placeholder-gray-400 focus:text-teal-600 focus:placeholder-teal-300"
+            />
+          </form>
         </div>
-    </footer> 
+        <!--Profile Cart -->
+        <div class="flex items-center justify-center gap-5">
+          <a href="./8.card.html" class="relative hover:scale-115">
+            <img src="/src/assets/shoppingcart.png" alt="Shopping Cart Icon" />
+            <span
+              class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center"
+              >6</span
+            >
+          </a>
+          <form
+            class="cursor-pointer h-11 border border-gray-300 hover:border-teal-400 focus-within:border-teal-500 rounded-xl flex items-center px-3 gap-2 hp:hidden desktop:w-50 desktop:inline-flex shadow-sm hover:shadow-md bg-white"
+          >
+            <img
+              src="/src/assets/profileicon.png"
+              alt="Profile Icon"
+              class="w-5 h-5 opacity-70 group-hover:opacity-100"
+            />
+            <input
+              type="text"
+              placeholder="John Doe"
+              class="flex-1 bg-transparent outline-none text-gray-700 text-sm placeholder-gray-400 focus:text-teal-600 focus:placeholder-teal-300"
+            />
+            <button
+              class="cursor-pointer desktop:hidden justify-center items-center flex flex-col gap-1 hover:scale-115"
+            >
+              <span class="block w-6 h-0.5 bg-black"></span>
+              <span class="block w-6 h-0.5 bg-black"></span>
+              <span class="block w-6 h-0.5 bg-black"></span>
+            </button>
+          </form>
+          <button
+            class="cursor-pointer desktop:hidden justify-center items-center flex flex-col gap-1 hover:scale-115"
+          >
+            <span class="block w-6 h-0.5 bg-black"></span>
+            <span class="block w-6 h-0.5 bg-black"></span>
+            <span class="block w-6 h-0.5 bg-black"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="container mx-auto px-4 py-8 flex-grow">
+      <h1 class="text-3xl font-bold text-gray-800 mb-6">Cart</h1>
 
-</body>
+      <div class="flex flex-col lg:flex-row gap-8">
+        <section class="flex-1 bg-white p-6 rounded-lg shadow-md">
+          <div class="mb-4 flex items-center space-x-2">
+            <input
+              type="checkbox"
+              id="selectAll"
+              class="form-checkbox h-5 w-5 text-indigo-600 rounded"
+            />
+            <label for="selectAll" class="text-gray-700">Select All</label>
+          </div>
+
+          <div class="space-y-6">
+            <div class="flex items-center justify-between border-b pb-4">
+              <div class="flex items-center space-x-4">
+                <input
+                  type="checkbox"
+                  class="form-checkbox h-5 w-5 text-indigo-600 rounded"
+                />
+                <img
+                  src="/src/assets/shoes.png"
+                  alt="Sneakers Court Minimalis"
+                  class="w-20 h-20 object-cover rounded-lg"
+                />
+                <div>
+                  <h3 class="font-semibold text-gray-800">
+                    Sneakers Court Minimalis
+                  </h3>
+                  <p class="text-gray-500 text-sm">Shoes</p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <p class="font-bold text-gray-600 w-24 text-right">Rp275.000</p>
+                <div
+                  class="flex items-center border border-gray-300 rounded-md"
+                >
+                  <button
+                    class="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded-l-md"
+                  >
+                    -
+                  </button>
+                  <span class="px-3 py-1 border-l border-r border-gray-300"
+                    >2</span
+                  >
+                  <button
+                    class="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded-r-md"
+                  >
+                    +
+                  </button>
+                </div>
+                <button class="text-gray-400 hover:text-red-500">
+                  <svg
+                    class="h-5 w-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns=""
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between border-b pb-4">
+              <div class="flex items-center space-x-4">
+                <input
+                  type="checkbox"
+                  class="form-checkbox h-5 w-5 text-indigo-600 rounded"
+                />
+                <img
+                  src="/src/assets/tshirt.png"
+                  alt="Kaos Katun Premium"
+                  class="w-20 h-20 object-cover rounded-lg"
+                />
+                <div>
+                  <h3 class="font-semibold text-gray-800">
+                    Kaos Katun Premium
+                  </h3>
+                  <p class="text-gray-500 text-sm">T-Shirt</p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <p class="font-bold text-gray-600 w-24 text-right">
+                  Rp1.100.000
+                </p>
+                <div
+                  class="flex items-center border border-gray-300 rounded-md"
+                >
+                  <button
+                    class="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded-l-md"
+                  >
+                    -
+                  </button>
+                  <span class="px-3 py-1 border-l border-r border-gray-300"
+                    >2</span
+                  >
+                  <button
+                    class="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded-r-md"
+                  >
+                    +
+                  </button>
+                </div>
+                <button class="text-gray-400 hover:text-red-500">
+                  <svg
+                    class="h-5 w-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns=""
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between border-b pb-4">
+              <div class="flex items-center space-x-4">
+                <input
+                  type="checkbox"
+                  class="form-checkbox h-5 w-5 text-indigo-600 rounded"
+                />
+                <img
+                  src="/src/assets/topi.png"
+                  alt="Topi Baseball 6-Panel"
+                  class="w-20 h-20 object-cover rounded-lg"
+                />
+                <div>
+                  <h3 class="font-semibold text-gray-800">
+                    Topi Baseball 6-Panel
+                  </h3>
+                  <p class="text-gray-500 text-sm">Accessories</p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <p class="font-bold text-gray-600 w-24 text-right">Rp320.000</p>
+                <div
+                  class="flex items-center border border-gray-300 rounded-md"
+                >
+                  <button
+                    class="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded-l-md"
+                  >
+                    -
+                  </button>
+                  <span class="px-3 py-1 border-l border-r border-gray-300"
+                    >2</span
+                  >
+                  <button
+                    class="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded-r-md"
+                  >
+                    +
+                  </button>
+                </div>
+                <button class="text-gray-400 hover:text-red-500">
+                  <svg
+                    class="h-5 w-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns=""
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between border-b pb-4">
+              <div class="flex items-center space-x-4">
+                <input
+                  type="checkbox"
+                  class="form-checkbox h-5 w-5 text-indigo-600 rounded"
+                />
+                <img
+                  src="/src/assets/trouser.png"
+                  alt="Celana Panjang Tailored"
+                  class="w-20 h-20 object-cover rounded-lg"
+                />
+                <div>
+                  <h3 class="font-semibold text-gray-800">
+                    Celana Panjang Tailored
+                  </h3>
+                  <p class="text-gray-500 text-sm">Trousers</p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <p class="font-bold text-gray-600 w-24 text-right">
+                  Rp2.200.000
+                </p>
+                <div
+                  class="flex items-center border border-gray-300 rounded-md"
+                >
+                  <button
+                    class="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded-l-md"
+                  >
+                    -
+                  </button>
+                  <span class="px-3 py-1 border-l border-r border-gray-300"
+                    >2</span
+                  >
+                  <button
+                    class="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded-r-md"
+                  >
+                    +
+                  </button>
+                </div>
+                <button class="text-gray-400 hover:text-red-500">
+                  <svg
+                    class="h-5 w-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns=""
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="flex items-center space-x-4">
+                <input
+                  type="checkbox"
+                  class="form-checkbox h-5 w-5 text-indigo-600 rounded"
+                />
+                <img
+                  src="/src/assets/hoodie.png"
+                  alt="Hoodie Pullover Fleece"
+                  class="w-20 h-20 object-cover rounded-lg"
+                />
+                <div>
+                  <h3 class="font-semibold text-gray-800">
+                    Hoodie Pullover Fleece
+                  </h3>
+                  <p class="text-gray-500 text-sm">Jacket</p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <p class="font-bold text-gray-600 w-24 text-right">Rp275.000</p>
+                <div
+                  class="flex items-center border border-gray-300 rounded-md"
+                >
+                  <button
+                    class="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded-l-md"
+                  >
+                    -
+                  </button>
+                  <span class="px-3 py-1 border-l border-r border-gray-300"
+                    >2</span
+                  >
+                  <button
+                    class="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded-r-md"
+                  >
+                    +
+                  </button>
+                </div>
+                <button class="text-gray-400 hover:text-red-500">
+                  <svg
+                    class="h-5 w-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns=""
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="w-full lg:w-80 bg-white p-6 rounded-lg shadow-md h-min">
+          <h2 class="text-xl font-bold text-gray-600 mb-4">Total Shopping</h2>
+          <div class="flex justify-between items-center mb-6">
+            <span class="text-gray-700">Total</span>
+            <span class="font-bold text-xl text-gray-600">Rp275.000</span>
+          </div>
+          <button
+            class="w-full bg-black text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition duration-300"
+          >
+            Checkout
+          </button>
+        </aside>
+      </div>
+    </main>
+    <footer class="bg-white mt-12 border-t border-gray-200">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="col-span-1 md:col-span-2">
+            <a href="#" class="flex items-center space-x-2">
+              <img
+                src="/src/assets/companyicon.png"
+                alt="Company Icon"
+                class="w-10 h-10 object-cover rounded-lg"
+              />
+              <span class="text-xl font-bold text-gray-900">Shirt</span>
+            </a>
+            <p class="mt-4 text-gray-500 max-w-sm">
+              Explore a realm of style with our fashion e-commerce platform,
+              where shopping is effortless. Experience a smooth journey with an
+              extensive selection of trendy apparel, all delivered directly to
+              your home.
+            </p>
+            <div class="mt-6">
+              <p class="text-gray-600 font-medium">Follow on Social Media</p>
+              <div class="flex space-x-4 mt-2">
+                <a href="#" class="text-gray-400 hover:text-gray-600"
+                  ><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M9.19795 21.5H13.198V13.4901H16.1618L16.674 9.50977H13.198V7.51126C13.198 6.92451 13.1106 6.37992 13.8058 6.37992L16.8368 6.38281V2.5H13.198C9.59854 2.5 8.125 4.35489 8.125 7.12736V9.50977H5.5V13.4901H8.125V21.5H9.19795Z"
+                    ></path></svg
+                ></a>
+                <a href="#" class="text-gray-400 hover:text-gray-600"
+                  ><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                    ></path></svg
+                ></a>
+                <a href="#" class="text-gray-400 hover:text-gray-600"
+                  ><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-4.455 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
+                    ></path></svg
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3
+              class="text-sm font-semibold text-gray-900 tracking-wider uppercase"
+            >
+              E-Commerce
+            </h3>
+            <ul class="mt-4 space-y-4">
+              <li>
+                <a href="#" class="text-base text-gray-500 hover:text-gray-900"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-base text-gray-500 hover:text-gray-900"
+                  >Terms & Condition</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-base text-gray-500 hover:text-gray-900"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-base text-gray-500 hover:text-gray-900"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3
+              class="text-sm font-semibold text-gray-900 tracking-wider uppercase"
+            >
+              Help
+            </h3>
+            <ul class="mt-4 space-y-4">
+              <li>
+                <a href="#" class="text-base text-gray-500 hover:text-gray-900"
+                  >How to Transact</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-base text-gray-500 hover:text-gray-900"
+                  >Payment Method</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-base text-gray-500 hover:text-gray-900"
+                  >How to Register</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <style>
+
+  </style>
+</head>
+<body class="font-display transition-all duration-500 ease-in-out">
+    <!-- Fando -> UI Design-Home -->
+      <!-- Section-Navbar -->
+        <nav class="w-full grid grid-cols-[auto_auto_auto_auto] text-center h-21 transition-all duration-500 ease-in-out invisible-before reveal">
+          <!-- Logo -->
+          <a href="#logo" class="flex items-center justify-center gap-2 transition-all duration-500 ease-in-out hover:scale-115 hover:z-50 ">
+              <!-- icon logo -->
+              <img class="desktop:h-[42px] desktop:w-[42px] hp:h-8 hp:w-8 transition-all duration-500 ease-in-out" src="/src/assets/companyicon.png" alt="companys icon" width="42" height="42">
+              <!-- font shirt -->
+              <span class="hp:hidden desktop:inline text-[clamp(16px,2vw,24px)] font-bold transition-all duration-500 ease-in-out">Shirt</span>
+          </a>
+          <!-- Catalog -->
+          <div class=" flex items-center justify-center desktop:gap-5 hp:gap-2 transition-all duration-500 ease-in-out">
+            <a href="#catalog" class="hp:w-10 hp:h-10 justify-center desktop:w-27 desktop:h-11 flex items-center gap-2 border-cust rounded-sm transition-all duration-500 ease-in-out hover:scale-115 hover:z-50  hover:shadow-lg">
+              <!-- icon catalog-->
+              <img src="/src/assets/catalogicon.png" alt="catalog icon" class="transition-all duration-500 ease-in-out">
+              <!-- Font catalog -->
+              <span class="hp:hidden desktop:inline transition-all duration-500 ease-in-out">catalog</span>
+            </a>
+            <!-- Search Form -->
+          <form class="cursor-pointer h-11 border border-gray-300 hover:border-teal-400 focus-within:border-teal-500 rounded-xl flex items-center px-3 gap-2 hp:w-47.5 desktop:w-122.75 shadow-sm hover:shadow-md bg-white transition-all duration-500 ease-in-out">
+            <!-- Icon search -->
+            <img src="/src/assets/searchicon.png" alt="search icon" class="w-5 h-5 opacity-70 group-hover:opacity-100 transition-all duration-500 ease-in-out">
+            <!-- Input search -->
+            <input type="text" placeholder="Search..." class="flex-1 bg-transparent outline-none text-gray-700 text-sm placeholder-gray-400 focus:text-teal-600 focus:placeholder-teal-300 transition-all duration-500 ease-in-out">
+          </form>
+          </div>
+          <!-- Profile -->
+          <div id="account" class=" flex items-center justify-center gap-5 transition-all duration-500 ease-in-out">
+              <a href="shoppingcart" class="relative transition-all duration-500 ease-in-out hover:scale-115">
+                <!-- icon shopping cart -->
+                <img src="/src/assets/shoppingcart.png" alt="shopping cart icon" class="transition-all duration-500 ease-in-out">
+                <!-- notification -->
+                <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center transition-all duration-500 ease-in-out">6</span>
+              </a>
+              <!-- Customer Form -->
+              <form class="cursor-pointer h-11 border border-gray-300 hover:border-teal-400 focus-within:border-teal-500 rounded-xl flex items-center px-3 gap-2 hp:hidden desktop:w-50 desktop:inline-flex shadow-sm hover:shadow-md bg-white transition-all duration-500 ease-in-out">
+                <!-- Icon customer -->
+                <img src="/src/assets/profileicon.png" alt="profile icon" class="w-5 h-5 opacity-70 group-hover:opacity-100 transition-all duration-500 ease-in-out">
+                <!-- Input customer -->
+                <input type="text" placeholder="John Doe" class="flex-1 bg-transparent outline-none text-gray-700 text-sm  placeholder-gray-400 focus:text-teal-600 focus:placeholder-teal-300 transition-all duration-500 ease-in-out">
+              </form>
+          </div>
+          <!-- icon humburger -->
+          <button class="cursor-pointer desktop:hidden justify-center items-center flex flex-col gap-1 transition-all duration-500 ease-in-out hover:scale-115">
+            <span class="block w-6 h-0.5 bg-black transition-all duration-500 ease-in-out"></span>
+            <span class="block w-6 h-0.5 bg-black transition-all duration-500 ease-in-out"></span>
+            <span class="block w-6 h-0.5 bg-black transition-all duration-500 ease-in-out"></span>
+          </button> 
+        </nav>
+      <!--Section-Hero -->
+        <section class="desktop:w-360 grid justify-center mx-auto desktop:p-10 hp:p-5 hp:px-5 transition-all duration-500 ease-in-out invisible-before reveal">
+            <div class="overflow-hidden desktop:gap-20 rounded-2xl desktop:w-300 desktop:h-85 hp:w-[361px] hp:h-[183px] grid desktop:grid-cols-[auto_auto] object-contain hp:grid-cols-2 justify-center items-center text-center bg-[#F3D7A4] transition-all duration-500 ease-in-out">
+                <img class="desktop:h-[367px] hp:h-[185px] desktop:-translate-x-20 transition-all duration-500 ease-in-out" src="/src/assets/modelpicture.png" alt="model picture">
+                <article class="gap-4  flex flex-col justify-center items-start desktop:-translate-x-20 text-left transition-all duration-500 ease-in-out">
+                    <span class="desktop:text-[48px] hp:text-[16px] text-[#553E32] font-bold desktop:py-3 transition-all duration-500 ease-in-out">NEW COLLECTION</span>
+                    <span class="desktop:text-2xl hp:text-sm text-[#553E32] font-semibold transition-all duration-500 ease-in-out">Stylish men's apparel for every occasion</span>
+                    <button class="cursor-pointer rounded-sm text-center desktop:text-xl hp:text-sm bg-[#0A0D12] desktop:w-[180px] desktop:h-[48px] hp:w-[93px] hp:h-[28px] text-[#FFFFFF] transition-all duration-500 ease-in-out hover:scale-115 hover:z-50  hover:shadow-lg">Get Now</button>
+                </article>
+            </div>
+        </section>
+      <!--Featured Product-Section -->
+        <section class="desktop:w-360 hp:w-[393px] grid justify-center mx-auto desktop:p-10 hp:p-5 transition-all duration-500 ease-in-out invisible-before reveal">
+          <div class=" desktop:w-300 desktop:h-461 hp:w-[393px] hp:h-623 hp:px-4 desktop:px-0 transition-all duration-500 ease-in-out">
+            <div class="text-[#0A0D12] py-4 desktop:text-4xl hp:text-2xl font-bold transition-all duration-500 ease-in-out">Featured Product</div>
+            <!-- Container untuk grid -->
+            <article id="product-grid" class="grid desktop:grid-cols-4 hp:grid-cols-2 gap-y-4 gap-x-4 transition-all duration-500 ease-in-out">
+            </article>
+            <button class="cursor-pointer mx-auto block desktop:translate-y-10 hp:translate-y-3 border-cust rounded-2xl desktop:w-55 desktop:h-12 hp:w-40 hp:h-12 transition-all duration-500 ease-in-out hover:scale-115 hover:z-50  hover:shadow-lg">Load More</button>
+          </div>
+        </section>
+
+      <!--Footer-Section -->
+        <section class=" mx-auto desktop:w-360 hp:w-[393px] grid justify-center transition-all duration-500 ease-in-out invisible-before reveal">
+          <div class="py-3  desktop:w-300 desktop:h-100 hp:w-[393px] hp:h-144 grid desktop:grid-cols-3 hp:grid-cols-1 justify-items-center transition-all duration-500 ease-in-out">
+            <!-- Logo & sosmed -->
+            <div class=" desktop:h-86 grid gap-4 desktop:w-95 hp:w-[361px] transition-all duration-500 ease-in-out">
+              <a href="#logo" class="flex items-center gap-2">
+                <!-- icon logo -->
+                <img class="desktop:h-10.5 desktop:w-10.5 hp:h-8 hp:w-8 transition-all duration-500 ease-in-out" src="/src/assets/companyicon.png" alt="companys icon" width="42" height="42">
+                <!-- font shirt -->
+                <span class="text-2xl font-bold transition-all duration-500 ease-in-out">Shirt</span>
+              </a>
+              <p class="transition-all duration-500 ease-in-out">Explore a realm of style with our fashion e-commerce platform, where shopping is effortless. Experience a smooth journey with an extensive selection of trendy apparel, all delivered directly to your home.</p>
+              <h4 class="font-bold text-xl transition-all duration-500 ease-in-out">Follow on Social Media</h4>
+              <!-- Sosmed -->
+              <div class="flex gap-3 transition-all duration-500 ease-in-out">
+                <div class="cursor-pointer border-cust rounded-full w-10 h-10 items-center flex justify-center transition-all duration-500 ease-in-out hover:scale-115"><img src="/src/assets/sosmed1.png" alt="facebook"></div>
+                <div class="cursor-pointer border-cust rounded-full w-10 h-10 items-center flex justify-center transition-all duration-500 ease-in-out hover:scale-115"><img src="/src/assets/sosmed2.png" alt="facebook"></div>
+                <div class="cursor-pointer border-cust rounded-full w-10 h-10 items-center flex justify-center transition-all duration-500 ease-in-out hover:scale-115"><img src="/src/assets/sosmed3.png" alt="facebook"></div>
+                <div class="cursor-pointer border-cust rounded-full w-10 h-10 items-center flex justify-center transition-all duration-500 ease-in-out hover:scale-115"><img src="/src/assets/sosmed4.png" alt="facebook"></div>
+              </div>
+            </div>
+            <!-- Contact Info -->
+            <div class="hp:py-4  grid desktop:h-[230px] desktop:w-50 hp:w-[361px] transition-all duration-500 ease-in-out">
+              <span class="font-bold transition-all duration-500 ease-in-out">E-Commerce</span>
+              <span class="cursor-pointer transition-all duration-500 ease-in-out">About Us</span>
+              <span class="cursor-pointer transition-all duration-500 ease-in-out">Terms & Condition</span>
+              <span class="cursor-pointer transition-all duration-500 ease-in-out">Privacy Policy</span>
+              <span class="cursor-pointer transition-all duration-500 ease-in-out">Blog</span>
+            </div>
+            <!-- Support -->
+            <div class="hp:py-4  grid desktop:h-[180px] desktop:w-50 hp:w-[361px] transition-all duration-500 ease-in-out">
+              <span class="font-bold transition-all duration-500 ease-in-out">Help</span>
+              <span class="cursor-pointer transition-all duration-500 ease-in-out">How to Transact</span>
+              <span class="cursor-pointer transition-all duration-500 ease-in-out">Payment Method</span>
+              <span class="cursor-pointer transition-all duration-500 ease-in-out">How to Register</span>
+            </div>
+          </div>
+        </section>
+
+            <script>
+              // Constructor untuk product card
+              class Product {
+                constructor(img, title, price, rating) {
+                  this.img = img;
+                  this.title = title;
+                  this.price = price;
+                  this.rating = rating;
+                }
+
+                // method untuk render card ke HTML
+                render() {
+                  return `
+                    <article class="cursor-pointer gap-3 flex flex-col w-full desktop:h-[403px] hp:h-[281px] bg-white rounded-lg shadow transition-all duration-500 ease-in-out hover:scale-115 hover:z-50  hover:shadow-xl invisible-before reveal">
+                      <!-- img product -->
+                      <img class="rounded-2xl desktop:h-[285px] hp:h-[173px] transition-all duration-500 ease-in-out" src="${this.img}" alt="${this.title}">
+                      <!-- title product -->
+                      <h4 class="line-clamp-1 px-2 desktop:text-l hp:text-sm transition-all duration-500 ease-in-out">${this.title}</h4>
+                      <!-- price product -->
+                      <data class="px-2 desktop:text-l hp:text-sm font-bold transition-all duration-500 ease-in-out">${this.price}</data>
+                      <!-- Rating -->
+                      <div class="desktop:text-l hp:text-sm translate-x-2 flex items-center gap-2 transition-all duration-500 ease-in-out">
+                        <img class="w-[17.12px] h-[16.35px] transition-all duration-500 ease-in-out" src="/src/assets/rating.png" alt="rating star">
+                        <span class="transition-all duration-500 ease-in-out">${this.rating}</span>
+                      </div>
+                    </article>
+                  `;
+                }
+              }
+
+              // Data produk (16 card contoh)
+              const products = [
+                new Product("/src/assets/product1.png", "Sneakers Court Minimalis", "Rp275.000", "4.9"),
+                new Product("/src/assets/product2.png", "Kaos Crewneck Esensial", "Rp800.000", "4.8"),
+                new Product("/src/assets/product3.png", "Tas Selempang Klasik", "Rp1.600.000", "4.7"),
+                new Product("/src/assets/product4.png", "Kaos Soft Touch", "Rp650.000", "4.6"),
+                new Product("/src/assets/product5.png", "Overshirt Utility", "Rp375.000", "4.5"),
+                new Product("/src/assets/product6.png", "Sweater Rajut Cable", "Rp1.300.000", "4.8"),
+                new Product("/src/assets/product7.png", "Syal Wol Kotak", "Rp220.000", "4.9"),
+                new Product("/src/assets/product8.png", "Syal Wol Solid", "Rp180.000", "4.7"),
+                new Product("/src/assets/product9.png", "Celana Panjang Tailored", "Rp2.200.000", "4.8"),
+                new Product("/src/assets/product10.png", "Sneakers Harian", "Rp1.900.000", "4.9"),
+                new Product("/src/assets/product11.png", "Jaket Puffer Quilted", "Rp450.000", "4.6"),
+                new Product("/src/assets/product12.png", "Kemeja Oxford", "Rp950.000", "4.8"),
+                new Product("/src/assets/product13.png", "Celana Pendek Chino", "Rp120.000", "4.5"),
+                new Product("/src/assets/product14.png", "Topi Baseball 6-Panel", "Rp320.000", "4.7"),
+                new Product("/src/assets/product15.png", "Kaos Katun Premium", "Rp1.100.000", "4.9"),
+                new Product("/src/assets/product16.png", "Hoodie Pullover Fleece", "Rp275.000", "4.8"),
+              ];
+
+              // Render semua product ke dalam grid
+              const grid = document.getElementById("product-grid");
+              grid.innerHTML = products.map(product => product.render()).join("");
+
+              // IntersectionObserver untuk reveal on scroll
+              const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                    entry.target.classList.add("animate-fade-in-up");
+                    entry.target.classList.remove("invisible-before");
+                    observer.unobserve(entry.target);
+                  }
+                });
+              }, { threshold: 0.1 });
+
+              // observe semua elemen dengan class .reveal
+              document.querySelectorAll(".reveal").forEach(el => {
+                observer.observe(el);
+              });
+            </script>
+
+</body>
+</html>
